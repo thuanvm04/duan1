@@ -1,0 +1,76 @@
+.row2{
+    width: 90%;
+    margin: 0 auto;
+}
+.font_title h1{
+color: rgb(10, 198, 198);
+line-height: 30px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.form_content{
+border: 1px solid #ccc;
+padding: 10px;
+}
+.form_content_container input[type="text"]
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+.btn_adddm input[type="submit"],
+.btn_adddm input[type="button"]{
+    border-radius: 6px;
+    background-color: #247dd7;
+    color: #ffffff;
+    padding: 4px 7px 4px 10px;
+    width: 120px;
+    line-height: 30px;
+}
+.btn_adddm{
+    margin-left: 50px;
+}
+table input[type="button"]{
+   margin-top: 5px;
+   margin-bottom: 5px;
+    width: 100%;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 1px 4px 1px 7px;
+    width: 60px;
+    line-height: 18px;
+}
+.btn_listdm{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.btn_edit_listdm{
+    background-color: rgb(18, 202, 141);
+}
+.btn_delete_listdm{
+    background-color: red;
+}
+.btn_list input[type="button"]{
+    border-radius: 6px;
+    background-color: #247dd7;
+    color: #ffffff;
+    padding: 2px 5px 2px 7px;
+    width: 120px;
+    line-height: 25px;
+    margin-left: 75px;
+}

@@ -8,7 +8,7 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
-
+  <link rel="stylesheet" href="../css/contentadmin.css">
 	<title>AdminHub</title>
 </head>
 <body>

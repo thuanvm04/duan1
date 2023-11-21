@@ -46,6 +46,11 @@ if (isset($_GET['act'])) {
             $danhmuc = danhmuc_selectAll();
             include "danhmuc/listdm.php";
             break;
+            // sản phẩm
+
+        case 'addsp':
+           
+            break;
         default:
             include "home.php";
             break;
