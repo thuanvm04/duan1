@@ -18,7 +18,23 @@
                                         <li><a href="services.html"> Courses </a></li>
                                         <li><a href="contact.html"> Events</a></li>
                                         <li><a href="blog.html">Blog </a></li>
-                                        <li><a href="blog.html">Contact Us </a></li>
+                                        
+                                        <?
+                    if(isset($_SESSION['dangky'])){
+                ?>php
+                   
+                   <li><a href="">Contact Us </a></li>
+                    <li> <a href="index.php?dangxuat=1">Đăng xuât</a></li>
+                <?php
+                    }else{
+                ?>
+                     <li> <a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                     <li> <a href="index.php?act=dangky">Đăng ký</a></li>
+                <?php
+                    }
+                ?>
+                 
+                
                                     </ul>
                                
                                 
