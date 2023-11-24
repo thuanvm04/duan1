@@ -1,6 +1,5 @@
 <?php
-require_once "../model/taikhoan.php"; 
-
+require_once "./model/taikhoan.php"; 
 
 session_start();
 
@@ -8,25 +7,21 @@ session_start();
 $error_message = "";
 
 // Xử lý khi form được submit
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-         {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["login"])) {
-       
         $full_name = $_POST["full_name"];
         $password = $_POST["password"];
 
+        // Sử dụng prepared statements để tránh SQL Injection
         $user = check_user($password, $full_name);
 
         if ($user) {
-            echo "Login form submitted!";
+            // Đăng nhập thành công
             $_SESSION["user_id"] = $user["user_id"];
             $_SESSION["username"] = $user["username"];
-            
-            // Chuyển hướng đến trang chính sau khi đăng nhập thành công
+
             header("Location: index.php");
             exit();
-
-            
         } else {
             // Đăng nhập không thành công, hiển thị thông báo lỗi
             $error_message = "Invalid email or password";
@@ -41,8 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         if (empty($email) || empty($password) || empty($fullName)) {
             $error_message = "All fields are required for registration";
         } else {
-            // Thực hiện đăng ký và chuyển hướng đến trang chính
+            // Sử dụng prepared statements để tránh SQL Injection
             them_khach_hang($password, $fullName, $email);
+
             header("Location: login.php");
             exit();
         }
@@ -65,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="login.php" method="post" id="registerForm">
+            <form action="index.php?act=login" method="post" id="registerForm">
                 <h1>Create Account</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -81,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="login.php" method="post" id="loginForm">
+            <form action="index.php?act=login" method="post" id="loginForm">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
