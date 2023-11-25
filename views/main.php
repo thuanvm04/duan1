@@ -1,10 +1,10 @@
 <?php
 include "model/pdo.php";
+include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/khoahoc.php";
-
-include "header.php";
-
+$khnew= kh_selectAll_view();
+$lsnew=lesson_select_one();
 $act = isset($_GET['act']) ? $_GET['act'] : '';
 switch ($act) {
     case 'login':
@@ -16,12 +16,7 @@ switch ($act) {
     case 'dangxuat':
         include "logout.php";
         break;
-        case 'course':
-            
-            $khnew= kh_selectAll_view();
-            
-            include "khoahoc.php";
-            break;
+       
 // chi tiết khoá học
 //   case 'chitietsp':
 //     if(isset($_GET['course_id'])&&($_GET['course_id'] > 0)){

@@ -124,7 +124,7 @@ if (isset($_GET['act'])) {
              
                 $thongbao = "cập nhật thành công";
             }
-            $listsp = khoahoc_selectAll("", 0);
+            $listkh = khoahoc_selectAll("", 0);
             include "khoahoc/list.php";
             break;
         default:

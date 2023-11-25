@@ -1,3 +1,7 @@
+<?php
+            foreach ($lsnew as $ls) {
+                extract($ls);}
+                ?>
 <!-- breadcrumb-area -->
 <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(../img/testimonial/test-bg.png)">
     <div class="container">
@@ -73,7 +77,7 @@
                             </li>
 
                             <li>
-                                <h6><span class="course-time"></span></h6>
+                                <h6><span class="course-time">'.$lesson_name.'</span></h6>
                                 <span> Class Duration</span>
                             </li>
                         </ul>
