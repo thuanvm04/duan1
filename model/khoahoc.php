@@ -45,4 +45,6 @@ function getLessonName($lesson_id) {
     $sql = "SELECT lesson_name FROM lessons WHERE lesson_id = :lesson_id";
    return pdo_query_one($sql, $lesson_id);
 }
+
+
 ?>
