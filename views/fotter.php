@@ -20,7 +20,7 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html"> About Us</a></li>
-                            <li><a href="services.html"> Courses </a></li>
+                            <li><a href="main.php?act=course"> Courses </a></li>
                             <li><a href="contact.html"> Events</a></li>
                             <?php
                             if (isset($_SESSION['username'])) {

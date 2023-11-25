@@ -1,5 +1,5 @@
 <?php
-
+      //admin
 function add_course($course_name, $description, $image, $instructor, $price, $category_id, $lesson_id) {
 
         $sql = "INSERT INTO courses(course_name, description, image, instructor, price, category_id, lesson_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -36,6 +36,13 @@ function cap_nhat_kh($course_name, $description, $image, $instructor, $price, $c
     pdo_execute($sql,$course_name, $description, $image, $instructor, $price, $category_id, $lesson_id, $course_id);
 
 }
-
-
+// view
+function kh_selectAll_view(){
+    $sql = "SELECT * FROM courses WHERE 1 ORDER BY course_id DESC LIMIT 0,9 ";
+    return pdo_query($sql);
+}
+function getLessonName($lesson_id) {
+    $sql = "SELECT lesson_name FROM lessons WHERE lesson_id = :lesson_id";
+   return pdo_query_one($sql, $lesson_id);
+}
 ?>

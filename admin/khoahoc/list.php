@@ -28,11 +28,14 @@
             <th>HÌNH ẢNH</th>
             <th>GIẢNG VIÊN</th>
             <th>HỌC PHÍ</th>
+            <!-- <th>BUỔI HỌC</th> -->
           </tr>
 
           <?php
           foreach ($listkh as $kh) {
             extract($kh);
+            // $lesson_id = $course['lesson_id'];
+            // $lesson_name = getLessonName($lesson_id);
             $suakh = "index.php?act=suakh&course_id=" . $course_id;
             $xoakh = "index.php?act=xoakh&course_id=" . $course_id;
 
@@ -44,6 +47,7 @@
                             <td> <img src="./image/' . $image . '" alt="" width="100px"> </td>
                             <td>' . $instructor . '</td>
                             <td>' . $price . '</td>
+                            // <td>' . $lesson_name . '</td>
                             <td class="btn_listdm"> 
                                 <a href="' . $suakh . '"><input class="btn_edit_listdm" type="button" value="Sửa"></a>  
                                 <a href="' . $xoakh . '"><input class="btn_delete_listdm" type="button" value="Xóa"></a>

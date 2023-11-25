@@ -1,11 +1,47 @@
-<section class="shop-area pt-120 pb-120 p-relative " style=" background-image: url(img/bg/blog-bg-aliments.png); background-repeat: no-repeat; background-position: center center;background-attachment: fixed;">
+
+  <!-- breadcrumb-area -->
+  <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(../img/testimonial/test-bg.png)">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="breadcrumb-wrap text-left">
+                                <div class="breadcrumb-title">
+                                    <h2>TẤT CẢ KHOÁ HỌC</h2>    
+                                    <div class="breadcrumb-wrap">
+                              
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- breadcrumb-area-end -->
+            <?php
+             foreach ($khnew as $kh) {
+      extract($kh);
+      $lesson_id = $_GET['lesson_id'];
+      $lesson_name = getLessonName($lesson_id);
+echo '
+<section class="shop-area pt-120 pb-120 p-relative " style=" background-image: url(../img/bg/blog-bg-aliments.png); background-repeat: no-repeat; background-position: center center;background-attachment: fixed;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-6">
                 <div class="product couress-box mb-40">
                     <div class="product__img">
-                        <a href="courses-details.html"><img src="img/featured-courses/courses-img1.png" alt=""></a>
+                        <a href="courses-details.html"><img src="../admin/image/'.$image.'" alt=""></a>
+                        <div class="mb">
+                        
+   
 
+  </div>
                     </div>
                     <div class="product__content pt-30">
                         <ul class="course-meta course-meta2 review style2 clearfix mb-30">
@@ -15,18 +51,16 @@
                                 </div>
 
                                 <div class="text">
-                                    <a href="#">Robto Jone</a>
+                                    <a href="#">'.$instructor.'</a>
                                     <p>Teacher</p>
                                 </div>
                             </li>
 
 
                         </ul>
-                        <div class="price">
-                            $95.00
-                        </div>
-                        <h4 class="pro-title"><a href="courses-details.html">Zero to Hero in Python 3</a></h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur accusamus hic ea in autem debitis minima.</p>
+                        <div class="price">'.$price.'</div>
+                        <h4 class="pro-title"><a href="courses-details.html">'.$course_name.'</a></h4>
+                        <p>'.$description.'</p>
                         <ul class="course-meta desc">
                             <li>
                                 <h6>1 year</h6>
@@ -39,7 +73,7 @@
                             </li>
 
                             <li>
-                                <h6><span class="course-time">7:00 - 10:00</span></h6>
+                                <h6><span class="course-time">'.$lesson_name.'</span></h6>
                                 <span> Class Duration</span>
                             </li>
                         </ul>
@@ -50,3 +84,6 @@
         </div>
     </div>
 </section>
+';
+}
+?>
