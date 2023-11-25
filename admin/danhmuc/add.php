@@ -1,6 +1,6 @@
 
 <main>
-<div class="row2">
+<div class="row2 container">
         <div class="row2 mb10 font_title">
         <h1>THÊM KHOÁ DANH MỤC HỌC MỚI</h1>
       </div>

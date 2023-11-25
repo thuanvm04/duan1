@@ -8,8 +8,8 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
-  <link rel="stylesheet" href="../css/contentadmin.css">
-	<title>AdminHub</title>
+	<link rel="stylesheet" href="../css/contentadmin.css">
+	<title>ADMIN DEV💕</title>
 </head>
 <body>
 
@@ -24,36 +24,36 @@
 			<li class="active">
 				<a href="index.php?act=adddm">
 					<i class='bx bxs-dashboard' ></i>
-					<span class="text">Danh mục</span>
+					<span class="text">DANH MỤC</span>
 				</a>
 			</li>
 			<li>
-				<a href="index.php?act=addlh">
+				<a href="index.php?act=addkh">
 					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Lớp học</span>
+					<span class="text">KHOÁ HỌC</span>
 				</a>
 			</li>
 			<li>
 				<a href="index.php?act=tongtien">
 					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">Tổng tiền</span>
+					<span class="text">TỔNG TIỀN</span>
 				</a>
 			</li>
 			<li>
 				<a href="index.php?act=binhluan">
 					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Bình luận</span>
+					<span class="text">BÌNH LUẬN</span>
 				</a>
 			</li>
 			<li>
 				<a href="index.php?act=thanhvien">
 					<i class='bx bxs-group' ></i>
-					<span class="text">Thành viên</span>
+					<span class="text">THÀNH VIÊN</span>
 				</a>
 			</li>
 		</ul>
 		<ul class="side-menu">
-			<li>
+			<li> 
 				<a href="#">
 					<i class='bx bxs-cog' ></i>
 					<span class="text">Settings</span>
@@ -61,11 +61,11 @@
 			</li>
 			<li>
 				<a href="#" class="logout">
-					<i class='bx bxs-log-out-circle'></i>
+					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>
 			</li>
 		</ul>
 	</section>
-    
+	<script src="../js/script.js"></script>
 	<!-- SIDEBAR -->

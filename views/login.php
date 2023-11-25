@@ -1,5 +1,5 @@
 <?php
-require_once "./model/taikhoan.php"; 
+require_once "../model/taikhoan.php"; 
 
 session_start();
 

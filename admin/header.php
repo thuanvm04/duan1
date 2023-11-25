@@ -16,6 +16,6 @@
 				<img src="img/people.png">
 			</a>
 		</nav>
-        <script src="../js/script.js"></script>
+  
 		<!-- NAVBAR -->
   

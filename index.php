@@ -40,7 +40,7 @@
         include "model/taikhoan.php";
         include "./views/header.php";
         include "./views/main.php";
-        include "./views/home.php";
+        // include "./views/home.php";
         include "./views/fotter.php";
         ?>
     </div>

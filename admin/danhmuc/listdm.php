@@ -1,4 +1,4 @@
-<div class="row2">
+<div class="row2 container">
          <div class="row2 font_title">
           <h1>DANH SÁCH KHOÁ HỌC</h1>
          </div>

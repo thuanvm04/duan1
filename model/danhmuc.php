@@ -9,7 +9,10 @@ function danhmuc_selectAll(){
     $sql = "SELECT * FROM category ORDER BY category_id DESC";
     return pdo_query($sql);
 }
-
+function buoihoc_selectAll(){
+    $sql = "SELECT * FROM lessons ORDER BY lessons_id DESC";
+    return pdo_query($sql);
+}
 // xoá danh mục
 function xoa_loai($ma_loai){
     $sql = "DELETE FROM category  WHERE category_id=?";

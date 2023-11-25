@@ -6,7 +6,7 @@ if(is_array($dm)){
 
 ?>
 
-<div class="row2">
+<div class="row2 container">
         <div class="row2 font_title mt20 mb20">
         <h1>CẬP NHẬT DANH MỤC KHOÁ HỌC</h1>
       </div>
