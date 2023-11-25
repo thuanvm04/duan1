@@ -36,9 +36,69 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <body>
     <!-- header -->
-    <header class="header-area header-three">
-        <div id="header-sticky" class="menu-area">
-            <!-- The rest of your HTML content for the header -->
-        </div>
-    </header>
-    <!-- header-end -->
+    <header class="header-area header-three">  
+			<div id="header-sticky" class="menu-area">
+                <div class="container">
+                    <div class="second-menu">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8">
+                              
+                                <div class="main-menu text-right text-xl-right">
+                                    <nav id="mobile-menu" style="display: block;">
+                                        <ul>
+                                            <li class="sub">
+												<a href="index.php?act=home">Home</a>
+											</li>
+                                            <li><a href="index.php?act=home">About Us</a></li>
+                                           
+                                            <li class="sub"> 
+                                              <a href="index.php?act=course">Courses</a>
+                                               
+                                            </li>
+                                             <li class="sub"> 
+                                              <a href="events.html">Events</a>
+                                            </li>
+                                            
+                                           <li class="sub"><a href="#">Pages</a>
+											
+											</li>
+                                            
+											<li class="sub"> 
+                                                <a href="blog.html">News</a>
+                                                <ul>													
+													<li><a href="blog.html">News</a></li>
+													<li><a href="blog-details.html">News Details</a></li>
+												</ul>
+                                            </li>
+                                                                        
+										  
+                                            <li><a href="contact.html">Contact</a></li>                                               
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>   
+                            <div class="col-xl-2 col-lg-2 text-right d-none d-xl-block mt-30 mb-30">
+                                <div class="search-top2">
+                                   <ul>
+                                       
+                                        <li><a href="#" class="menu-tigger"><i class="fas fa-search"></i></a></li>
+                                        <li><a href="#" class="menu-tigger"><img src="img/icon/menu.png" alt="logo"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                          
+                            
+                                <div class="col-12">
+                                    <div class="mobile-menu"></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->

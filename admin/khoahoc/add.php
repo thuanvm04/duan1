@@ -45,7 +45,13 @@
            <H1>GIẢNG VIÊN</H1><br>
             <input type="text" name="giang_vien" placeholder="Nhập vào tên giảng viên">
           </div>
-         <!-- Thời gian -->
+          <!-- thời gian -->
+           <!-- Giáo viên-->
+           <div class="row2 mb10  form_content_container">
+           <H1>THỜI GIAN</H1><br>
+            <input type="text" name="thoigian" placeholder="Thời gian khoá học">
+          </div>
+         <!-- Buổi học -->
          <div class="row2 mb10">
            <H1>BUỔI HỌC</H1> <br>
             <select name="buoi_hoc" id="">

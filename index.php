@@ -10,6 +10,7 @@ $lsnew=lesson_select_one();
 $act = isset($_GET['act']) ? $_GET['act'] : '';
 
 switch ($act) {
+
     case 'login':
         include "login.php";
         break;
@@ -30,7 +31,7 @@ switch ($act) {
         include "views/khoahoc.php";
         break;
 }
-
+ include "views/fotter.php";
 
 ?>
 

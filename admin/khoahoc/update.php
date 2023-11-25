@@ -47,10 +47,14 @@ if(is_array($kh)){
           <!-- Giá -->
           <div class="row2 mb10 form_content_container">
             <label> GIÁ </label> <br>
-            <input type="text" name="don_gia" value="<?= $price?>" placeholder="nhập vào giá">
+            <input type="text" name="don_gia" value="<?=$price?>" placeholder="nhập vào giá">
           </div>
          
-        
+         <!-- Thời gian -->
+         <div class="row2 mb10 form_content_container">
+            <label> THỜI GIAN </label> <br>
+            <input type="text" name="thoigian" value="<?=$time?>" placeholder="nhập thời gian ">
+          </div>
           <div class="row2 mb10">
             <h1>DANH MỤC</h1> <br>
             <select name="category">
