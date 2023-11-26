@@ -9,6 +9,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/contentadmin.css">
+	
 	<title>ADMIN E-DEV💕</title>
 </head>
 <body>

@@ -1,9 +1,9 @@
 <?php
       //admin
-      function add_course($course_name, $description, $image, $instructor, $price, $category_id, $lesson_id) {
+      function add_course($course_name, $description, $image, $instructor, $price, $category_id, $lesson_id ,$thoigian) {
 
-        $sql = "INSERT INTO courses(course_name, description, image, instructor, price, category_id, lesson_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        pdo_execute($sql, $course_name, $description, $image, $instructor, $price, $category_id, $lesson_id);
+        $sql = "INSERT INTO courses(course_name, description, image, instructor, price, category_id, lesson_id, thoigian ) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
+        pdo_execute($sql, $course_name, $description, $image, $instructor, $price, $category_id, $lesson_id,$thoigian);
     }
 function lesson_selectAll(){
     $sql = "SELECT * FROM lessons ORDER BY lesson_id ASC";
@@ -30,10 +30,10 @@ function select_kh_one($course_id){
     $sql = "SELECT * FROM courses WHERE course_id=?";
     return pdo_query_one($sql, $course_id);
 }
-function cap_nhat_kh($course_name, $description, $image, $instructor, $price, $category_id, $lesson_id, $course_id){
+function cap_nhat_kh($course_name, $description, $image, $instructor, $price, $category_id, $lesson_id, $course_id,$thoigian){
     // Chuẩn bị truy vấn với tham số
-    $sql = "UPDATE courses SET course_name=?, description=?, image=?, instructor=?, price=?, category_id=?, lesson_id=? WHERE course_id=?";
-    pdo_execute($sql,$course_name, $description, $image, $instructor, $price, $category_id, $lesson_id, $course_id);
+    $sql = "UPDATE courses SET course_name=?, description=?, image=?, instructor=?, price=?, category_id=?, lesson_id=? , thoigian=? WHERE course_id=?";
+    pdo_execute($sql,$course_name, $description, $image, $instructor, $price, $category_id, $lesson_id, $course_id,$thoigian);
 
 }
 // view

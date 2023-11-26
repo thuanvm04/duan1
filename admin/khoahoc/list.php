@@ -47,7 +47,7 @@
                             <td> <img src="./image/' . $image . '" alt="" width="100px"> </td>
                             <td>' . $instructor . '</td>
                             <td>' . $price . '</td>
-                            <td>' . $time. '</td>
+                            <td>' . $thoigian. '</td>
                             <td class="btn_listdm"> 
                                 <a href="' . $suakh . '"><input class="btn_edit_listdm" type="button" value="Sửa"></a>  
                                 <a href="' . $xoakh . '"><input class="btn_delete_listdm" type="button" value="Xóa"></a>
