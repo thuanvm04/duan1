@@ -29,6 +29,7 @@
             <th>GIẢNG VIÊN</th>
             <th>HỌC PHÍ</th>
             <th>THỜI GIAN</th>
+            <th>HÀNH ĐỘNG</th>
             <!-- <th>BUỔI HỌC</th> -->
           </tr>
 

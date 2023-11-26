@@ -10,6 +10,7 @@
                 
                 <th>MÃ KHOÁ HỌC</th>
                 <th>TÊN KHOÁ HỌC</th>
+                <th>HÀNH ĐỘNG</th>
                 <th></th>
             </tr>
 
