@@ -9,8 +9,12 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/contentadmin.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
 	
 	<title>ADMIN E-DEV💕</title>
+
 </head>
 <body>
 
@@ -48,7 +52,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="index.php?act=thanhvien">
+				<a href="index.php?act=dstk">
 					<i class='bx bxs-group' ></i>
 					<span class="text">THÀNH VIÊN</span>
 				</a>

@@ -3,6 +3,7 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/khoahoc.php";
+include "../model/taikhoan.php";
 
 
 include "header.php";
@@ -133,6 +134,19 @@ if (isset($_GET['act'])) {
         default:
             include "home.php";
             break;
+            // Tài khoản
+            case 'dstk':
+                $danhsachtk = hien_thi_khach_hang();
+                include "taikhoan/list.php";
+                break;
+             case 'xoatk':
+                    if(isset($_GET['user_id']) && ($_GET['user_id'] > 0)){
+                        $ma_kh= $_GET['user_id'];
+                        xoa_khach_hang($ma_kh);
+                    }
+                    $danhsachtk = hien_thi_khach_hang();
+                    include "taikhoan/list.php";
+                    break;
     }
 } else {
     include "home.php";
