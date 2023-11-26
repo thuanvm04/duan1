@@ -48,7 +48,7 @@ if (isset($_GET['act'])) {
             $danhmuc = danhmuc_selectAll();
             include "danhmuc/listdm.php";
             break;
-            // sản phẩm
+            // khoá học
 
         case 'addkh':
             if (isset($_POST['themmoi']) && $_POST['themmoi']) {
@@ -122,10 +122,11 @@ if (isset($_GET['act'])) {
                     $hinh = $_POST['old_image'];
                 }
                 // them_hang_hoa($ten_hh, $don_gia, $hinh,  $mo_ta,  $ma_loai);
-                cap_nhat_kh($course_name,$description,$hinh, $instructor,  $price,$category_id, $lesson_id, $course_id,$thoigian);
+                cap_nhat_kh($course_name,$description,$hinh, $instructor,  $price,$category_id, $lesson_id,$thoigian ,$course_id);
              
                 $thongbao = "cập nhật thành công";
             }
+        
             $listkh = khoahoc_selectAll("", 0);
             include "khoahoc/list.php";
             break;
@@ -136,3 +137,5 @@ if (isset($_GET['act'])) {
 } else {
     include "home.php";
 }
+
+?>

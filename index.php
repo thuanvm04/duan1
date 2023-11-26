@@ -24,6 +24,7 @@ if (isset($_GET['act'])) {
         case 'course':
             include "views/khoahoc.php";
             break;
+        
         default:
             include "views/khoahoc.php";
             break;
