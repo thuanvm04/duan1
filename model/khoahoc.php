@@ -46,4 +46,10 @@ function lesson_select_one(){
     return pdo_query($sql);
 }
 
+function get_course_details($course_id){
+    $sql = "SELECT * FROM courses WHERE course_id=?";
+    return pdo_query_one($sql, $course_id);
+}
+
+
 ?>

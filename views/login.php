@@ -1,7 +1,8 @@
 <?php
-require_once "../model/taikhoan.php"; 
+ob_start();
+require_once "./model/taikhoan.php"; 
 
-session_start();
+// session_start();
 
 // Biến lưu trữ thông báo lỗi
 $error_message = "";
@@ -20,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["user_id"] = $user["user_id"];
             $_SESSION["username"] = $user["username"];
 
-            header("Location: index.php");
+            header("Location: ../index.php");
             exit();
         } else {
             // Đăng nhập không thành công, hiển thị thông báo lỗi
@@ -53,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/stylelogin.css">
+    <link rel="stylesheet" href="css/stylelogin.css">
     <title>Modern Login Page | AsmrProg</title>
 </head>
 
@@ -108,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 
-    <script src="../js/login.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
