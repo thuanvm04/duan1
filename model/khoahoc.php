@@ -48,4 +48,10 @@ function getLessonName($lessonId){
     return pdo_query_one($sql, $lessonId);
 }
 
+function get_course_details($course_id){
+    $sql = "SELECT * FROM courses WHERE course_id=?";
+    return pdo_query_one($sql, $course_id);
+}
+
+
 ?>

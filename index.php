@@ -4,7 +4,14 @@ include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/khoahoc.php";
 
+
+session_start();
+
 include "views/header.php";
+
+
+
+
 $khnew = kh_selectAll_view();
 
 
@@ -22,9 +29,11 @@ if (isset($_GET['act'])) {
             include "logout.php";
             break;
         case 'course':
-               
             include "views/khoahoc.php";
             break;
+            case 'detail':
+                include "views/detail.php";
+                break;
             case 'home':
                
                 include "views/home.php";
@@ -35,6 +44,8 @@ if (isset($_GET['act'])) {
     }
 } else {
     include "views/home.php";
-}
+} 
 
 include "views/fotter.php";
+
+  
