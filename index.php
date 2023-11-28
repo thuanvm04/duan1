@@ -6,12 +6,12 @@ include "model/khoahoc.php";
 
 include "views/header.php";
 $khnew = kh_selectAll_view();
-$lsnew = lesson_select_one();
+
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
-
+       
         case 'login':
             include "login.php";
             break;
@@ -22,9 +22,13 @@ if (isset($_GET['act'])) {
             include "logout.php";
             break;
         case 'course':
+               
             include "views/khoahoc.php";
             break;
-        
+            case 'home':
+               
+                include "views/home.php";
+                break;
         default:
             include "views/khoahoc.php";
             break;

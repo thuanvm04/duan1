@@ -5423,7 +5423,7 @@ text-align: center;
 .product__img {
   position: relative;
 }
-.product__img img {
+.product__img a img {
 	width: 100%;
 }
 .product:hover .product-action a {

@@ -4,7 +4,7 @@ include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/khoahoc.php";
 $khnew= kh_selectAll_view();
-$lsnew=lesson_select_one();
+// $lsnew=lesson_select_one();
 $act = isset($_GET['act']) ? $_GET['act'] : '';
 switch ($act) {
     case 'login':

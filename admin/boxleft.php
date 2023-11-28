@@ -9,7 +9,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/contentadmin.css">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	
 
 
 	
@@ -25,33 +25,41 @@
 			<i class='bx bxs-smile'></i>
 			<span class="text">E-DEV</span>
 		</a>
+		
 		<ul class="side-menu top">
-			<li class="active">
+		<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'home') ? 'active' : ''; ?>">
+				<a href="index.php?act=home">
+					<i class='bx bxs-home' ></i>
+					<span class="text">TRANG CHỦ</span>
+				</a>
+			</li>
+
+			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'adddm') ? 'active' : ''; ?>">
 				<a href="index.php?act=adddm">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">DANH MỤC</span>
 				</a>
 			</li>
 			
-			<li>
+			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'addkh') ? 'active' : ''; ?>">
 				<a href="index.php?act=addkh">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">KHOÁ HỌC</span>
 				</a>
 			</li>
-			<li>
+			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'tongtien') ? 'active' : ''; ?>">
 				<a href="index.php?act=tongtien">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">TỔNG TIỀN</span>
 				</a>
 			</li>
-			<li>
+			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'binhluan') ? 'active' : ''; ?>">
 				<a href="index.php?act=binhluan">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">BÌNH LUẬN</span>
 				</a>
 			</li>
-			<li>
+			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'dstk') ? 'active' : ''; ?>">
 				<a href="index.php?act=dstk">
 					<i class='bx bxs-group' ></i>
 					<span class="text">THÀNH VIÊN</span>
@@ -73,5 +81,5 @@
 			</li>
 		</ul>
 	</section>
-	<script src="../js/script.js"></script>
+	<script src="./js/script.js"></script>
 	<!-- SIDEBAR -->

@@ -42,9 +42,10 @@ function kh_selectAll_view(){
     $sql = "SELECT * FROM courses WHERE 1 ORDER BY course_id DESC LIMIT 0,9 ";
     return pdo_query($sql);
 }
-function lesson_select_one(){
-    $sql = "SELECT * FROM lessons ORDER BY lesson_id ASC";
-    return pdo_query($sql);
+
+function getLessonName($lessonId){
+    $sql = "SELECT lesson_name FROM lessons ls , courses kh WHERE ls.lesson_id = kh.lesson_id AND ls.lesson_id = ?";
+    return pdo_query_one($sql, $lessonId);
 }
 
 ?>

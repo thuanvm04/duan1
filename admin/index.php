@@ -12,6 +12,11 @@ include "boxleft.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
+        case 'home':
+           
+            include "home.php";
+            break;
+
             // Danh Mục
         case 'adddm':
             if (isset($_POST['themmoi']) && $_POST['themmoi']) {
