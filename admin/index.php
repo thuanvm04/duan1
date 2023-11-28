@@ -4,7 +4,7 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/khoahoc.php";
 include "../model/taikhoan.php";
-
+include "../model/binhluan.php";
 
 include "header.php";
 include "boxleft.php";
@@ -152,6 +152,11 @@ if (isset($_GET['act'])) {
                     $danhsachtk = hien_thi_khach_hang();
                     include "taikhoan/list.php";
                     break;
+        // Bình Luận
+        case 'dsbl':
+            $danhsachbl = hien_thi_binh_luan();
+            include "binhluan/list.php";
+            break;
     }
 } else {
     include "home.php";
