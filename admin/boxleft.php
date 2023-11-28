@@ -9,12 +9,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/contentadmin.css">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-
-
-	
-	<title>ADMIN E-DEV💕</title>
-
+	<title>ADMIN DEV💕</title>
 </head>
 <body>
 
@@ -46,7 +41,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="index.php?act=binhluan">
+				<a href="index.php?act=dsbl">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">BÌNH LUẬN</span>
 				</a>
