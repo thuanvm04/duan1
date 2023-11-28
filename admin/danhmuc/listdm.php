@@ -1,6 +1,7 @@
+<main>
 <div class="row2 container">
          <div class="row2 font_title">
-          <h1>DANH SÁCH KHOÁ HỌC</h1>
+          <h1>DANH SÁCH DANH MỤC</h1>
          </div>
          <div class="row2 form_content ">
           <form class="mt20" action="#" method="POST">
@@ -10,8 +11,12 @@
                 
                 <th>MÃ KHOÁ HỌC</th>
                 <th>TÊN KHOÁ HỌC</th>
+<<<<<<< HEAD
+                
+=======
                 <th>HÀNH ĐỘNG</th>
                 <th></th>
+>>>>>>> 68016c548875db1a36b262b0ac0e6f35b6990342
             </tr>
 
             <?php
@@ -41,6 +46,8 @@
           </form>
          </div>
         </div>
+        </main>
+</section>
         <?php
             if (isset($thongbao) && $thongbao != "") {
               echo $thongbao;

@@ -9,10 +9,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/contentadmin.css">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<title>ADMIN DEV💕</title>
-	
-	
 </head>
 <body>
 
@@ -30,6 +27,7 @@
 					<span class="text">DANH MỤC</span>
 				</a>
 			</li>
+			
 			<li>
 				<a href="index.php?act=addkh">
 					<i class='bx bxs-shopping-bag-alt' ></i>

@@ -1,3 +1,4 @@
+<main>
 <div class="row2 container mt20">
   <div class="row2 font_title mb">
     <h1>DANH SÁCH KHOÁ HỌC</h1>
@@ -67,3 +68,5 @@
     </form>
   </div>
 </div>
+</main>
+</section>

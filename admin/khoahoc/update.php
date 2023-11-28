@@ -5,7 +5,7 @@ if(is_array($kh)){
 
   
 ?>
-
+<main>
 <div class="row2 container mt20">
         <div class="row2 font_title">
         <h1>CẬP NHẬT KHOÁ HỌC</h1>
@@ -93,8 +93,6 @@ if(is_array($kh)){
           <div class="row mb10 btn_adddm">
             <input type="hidden" name="course_id" value="<?=$course_id?>">
             <input class="btn_update_kh" type="submit" name="capnhat" value="CẬP NHẬT">
-          
-
             <a href="index.php?act=listkh"><input  type="button" value="DANH SÁCH"></a>
           </div>
           
@@ -104,5 +102,8 @@ if(is_array($kh)){
             if (isset($thongbao) && $thongbao != "") {
               echo $thongbao;
             }
+         
           ?>
 </div>
+</main>
+</section>
