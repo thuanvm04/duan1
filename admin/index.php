@@ -3,6 +3,7 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/khoahoc.php";
+include "../model/taikhoan.php";
 
 
 include "header.php";
@@ -48,7 +49,7 @@ if (isset($_GET['act'])) {
             $danhmuc = danhmuc_selectAll();
             include "danhmuc/listdm.php";
             break;
-            // sản phẩm
+            // khoá học
 
         case 'addkh':
             if (isset($_POST['themmoi']) && $_POST['themmoi']) {
@@ -58,12 +59,12 @@ if (isset($_GET['act'])) {
                 $danhmuc = $_POST['danhmuc'];
                 $buoihoc = $_POST['buoi_hoc'];
                 $giangvien = $_POST['giang_vien'];
-                $time=$_POST['thoigian'];
+                $thoigian = $_POST['thoigian'];
                 $file = $_FILES['hinh'];
                 $hinh = $file['name'];
                 move_uploaded_file($file['tmp_name'], "./image/" . $hinh);
 
-                add_course($ten_kh, $mo_ta, $hinh, $giangvien, $don_gia, $danhmuc, $buoihoc,$time);
+                add_course($ten_kh, $mo_ta, $hinh, $giangvien, $don_gia, $danhmuc, $buoihoc,$thoigian);
                 $thongbao = "Thêm thành công";
             }
             $danhmuc = danhmuc_selectAll();
@@ -112,7 +113,7 @@ if (isset($_GET['act'])) {
                 $category_id = $_POST['category'];
                 $instructor = $_POST['giangvien'];
                 $lesson_id = $_POST['lesson'];
-                $time = $_POST['thoigian'];
+                $thoigian=$_POST['thoigian'];
                 $file = $_FILES['hinh'];
                 if ($file['size'] > 0) {
                     $hinh = $file['name'];
@@ -121,18 +122,34 @@ if (isset($_GET['act'])) {
                     // Nếu không có tệp tải lên, giữ nguyên ảnh cũ bằng cách lấy giá trị từ trường ẩn
                     $hinh = $_POST['old_image'];
                 }
-        
-                cap_nhat_kh($course_name,$description,$hinh, $instructor,  $price,$category_id, $lesson_id, $course_id,$time);
+                // them_hang_hoa($ten_hh, $don_gia, $hinh,  $mo_ta,  $ma_loai);
+                cap_nhat_kh($course_name,$description,$hinh, $instructor,  $price,$category_id, $lesson_id,$thoigian ,$course_id);
              
                 $thongbao = "cập nhật thành công";
             }
+        
             $listkh = khoahoc_selectAll("", 0);
             include "khoahoc/list.php";
             break;
         default:
             include "home.php";
             break;
+            // Tài khoản
+            case 'dstk':
+                $danhsachtk = hien_thi_khach_hang();
+                include "taikhoan/list.php";
+                break;
+             case 'xoatk':
+                    if(isset($_GET['user_id']) && ($_GET['user_id'] > 0)){
+                        $ma_kh= $_GET['user_id'];
+                        xoa_khach_hang($ma_kh);
+                    }
+                    $danhsachtk = hien_thi_khach_hang();
+                    include "taikhoan/list.php";
+                    break;
     }
 } else {
     include "home.php";
 }
+
+?>

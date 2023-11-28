@@ -9,7 +9,12 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/contentadmin.css">
-	<title>ADMIN DEV💕</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+	
+	<title>ADMIN E-DEV💕</title>
+
 </head>
 <body>
 
@@ -18,7 +23,7 @@
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
-			<span class="text">DEV</span>
+			<span class="text">E-DEV</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -27,6 +32,7 @@
 					<span class="text">DANH MỤC</span>
 				</a>
 			</li>
+			
 			<li>
 				<a href="index.php?act=addkh">
 					<i class='bx bxs-shopping-bag-alt' ></i>
@@ -46,7 +52,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="index.php?act=thanhvien">
+				<a href="index.php?act=dstk">
 					<i class='bx bxs-group' ></i>
 					<span class="text">THÀNH VIÊN</span>
 				</a>
