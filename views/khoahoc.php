@@ -9,7 +9,7 @@
                         <div class="breadcrumb-wrap">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php?act=home">Trang chủ</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Pricing</li>
                                 </ol>
                             </nav>
@@ -38,7 +38,7 @@ if (is_array($lessonName)) {
                 echo '    <div class="col-lg-4 col-md-6">
                 <div class="product couress-box mb-40">
                     <div class="product__img">
-                        <a href="index.php?act=detail"><img src="../admin/image/' . $image . '" alt=""></a>
+                        <a href="index.php?act=detail&spct='.$course_id.'"><img src="../admin/image/' . $image . '" alt=""></a>
                         <div class="mb">
                         
    

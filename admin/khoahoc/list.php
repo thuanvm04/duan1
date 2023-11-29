@@ -30,7 +30,9 @@
             <th>GIẢNG VIÊN</th>
             <th>HỌC PHÍ</th>
             <th>THỜI GIAN</th>
+            <th>INTRO</th>
             <th>HÀNH ĐỘNG</th>
+         
             <!-- <th>BUỔI HỌC</th> -->
           </tr>
 
@@ -50,6 +52,7 @@
                             <td>' . $instructor . '</td>
                             <td>' . $price . '</td>
                             <td>' . $thoigian. '</td>
+                            <td>' . $intro. '</td>
                             <td class="btn_listdm"> 
                                 <a href="' . $suakh . '"><input class="btn_edit_listdm" type="button" value="Sửa"></a>  
                                 <a href="' . $xoakh . '"><input class="btn_delete_listdm" type="button" value="Xóa"></a>

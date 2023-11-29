@@ -20,13 +20,8 @@ if (isset($_GET['act'])) {
     switch ($act) {
        
         case 'login':
-            include "login.php";
-            break;
-        case 'dangky':
-            include "dangky.php";
-            break;
-        case 'dangxuat':
-            include "logout.php";
+            
+            include "views/login.php";
             break;
         case 'course':
             include "views/khoahoc.php";
@@ -35,11 +30,10 @@ if (isset($_GET['act'])) {
                 include "views/detail.php";
                 break;
             case 'home':
-               
                 include "views/home.php";
                 break;
         default:
-            include "views/khoahoc.php";
+            include "views/home.php";
             break;
     }
 } else {

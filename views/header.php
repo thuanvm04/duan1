@@ -75,22 +75,26 @@ if (session_status() === PHP_SESSION_NONE) {
 													<li><a href="blog-details.html">News Details</a></li>
 												</ul>
                                             </li>
-                                                                        
+                                            <?php
+                            if (isset($_SESSION['username'])) {
+                                ?>
+                                <li><a href="">Contact Us </a></li>
+                                <li><a href="index.php?dangxuat=1">Log Out</a></li>
+                                <?php
+                            } else {
+                                ?>
+                                <li><a href="index.php?act=login">Sign In</a></li>
+                                
+                                <?php
+                            }
+                            ?>      
 										  
-                                            <li><a href="contact.html">Contact</a></li>                                               
+                                                                                         
                                         </ul>
                                     </nav>
                                 </div>
                             </div>   
-                            <div class="col-xl-2 col-lg-2 text-right d-none d-xl-block mt-30 mb-30">
-                                <div class="search-top2">
-                                   <ul>
-                                       
-                                        <li><a href="#" class="menu-tigger"><i class="fas fa-search"></i></a></li>
-                                        <li><a href="#" class="menu-tigger"><img src="img/icon/menu.png" alt="logo"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                           
                           
                             
                                 <div class="col-12">

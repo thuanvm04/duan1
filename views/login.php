@@ -1,6 +1,6 @@
 <?php
-ob_start();
-require_once "./model/taikhoan.php"; 
+ ob_start();
+
 
 // session_start();
 
@@ -20,8 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Đăng nhập thành công
             $_SESSION["user_id"] = $user["user_id"];
             $_SESSION["username"] = $user["username"];
-
-            header("Location: ../index.php");
+            header("Location: index.php");
             exit();
         } else {
             // Đăng nhập không thành công, hiển thị thông báo lỗi
@@ -40,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Sử dụng prepared statements để tránh SQL Injection
             them_khach_hang($password, $fullName, $email);
 
-            header("Location: login.php");
+            header("Location: login.php");      
             exit();
         }
     }

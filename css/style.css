@@ -2766,9 +2766,7 @@ margin-bottom: 0;
     padding-bottom: 0;
 }
 /* 14. testimonial */
-.testimonial-area h2,.testimonial-area p{
-	
-}
+
 .ta-bg {
 	height: 475px;
 	width: 475px;
@@ -9064,4 +9062,7 @@ div.single-cta:last-child {
 }
 .course-meta2 a,.couress-box .course-meta2 li{
     color: #fff;
+}
+.courses-area{
+    margin-bottom: 50px;
 }

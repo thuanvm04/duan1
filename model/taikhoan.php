@@ -1,6 +1,6 @@
 <?php
 
-require_once "pdo.php";
+
 
 // Thêm khách hàng
 function them_khach_hang($mat_khau, $ho_ten, $email) {

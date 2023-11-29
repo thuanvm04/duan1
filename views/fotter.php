@@ -22,19 +22,7 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
                             <li><a href="about.html"> About Us</a></li>
                             <li><a href="main.php?act=course"> Courses </a></li>
                             <li><a href="contact.html"> Events</a></li>
-                            <?php
-                            if (isset($_SESSION['username'])) {
-                                ?>
-                                <li><a href="">Contact Us </a></li>
-                                <li><a href="index.php?dangxuat=1">Log Out</a></li>
-                                <?php
-                            } else {
-                                ?>
-                                <li><a href="index.php?act=login">Sign In</a></li>
-                                <li><a href="index.php?act=dangky">Sign Up</a></li>
-                                <?php
-                            }
-                            ?>
+                           
                         </ul>
                     </div>
                 </div>
