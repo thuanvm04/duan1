@@ -4,7 +4,7 @@
 
 // session_start();
 
-// Biến lưu trữ thông báo lỗi
+
 $error_message = "";
 
 // Xử lý khi form được submit
@@ -24,13 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redirect dựa vào vai trò của người dùng
             if ($_SESSION["role"] == "admin") {
-                header("Location: admin"); // Điều hướng đến trang quản trị admin
+                header("Location: admin"); 
             } else {
-                header("Location: index.php"); // Điều hướng đến trang chính
+                header("Location: index.php");
             }
             exit();
         } else {
-            // Đăng nhập không thành công, hiển thị thông báo lỗi
+            
             $error_message = "Invalid email or password";
         }
     } elseif (isset($_POST["register"])) {
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($username) ||empty($email) ||  empty($password) ) {
             $error_message = "All fields are required for registration";
         } else {
-            // Sử dụng prepared statements để tránh SQL Injection
+            
             
             them_khach_hang($username,$password,  $email);
 
