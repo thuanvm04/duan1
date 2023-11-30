@@ -24,6 +24,7 @@ if (!isset($_SESSION['username'])) {
 			<a href="#" class="profile">
 				<img src="img/people.png">
 			</a>
+			
 		</nav>
   
 		<!-- NAVBAR -->
