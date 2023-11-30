@@ -1,6 +1,6 @@
 <?php
-ob_start();
-require_once "./model/taikhoan.php"; 
+ 
+
 
 // session_start();
 
@@ -10,18 +10,24 @@ $error_message = "";
 // Xử lý khi form được submit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["login"])) {
-        $full_name = $_POST["full_name"];
+        $username = $_POST["username"];
         $password = $_POST["password"];
 
         // Sử dụng prepared statements để tránh SQL Injection
-        $user = check_user($password, $full_name);
+        $user = check_user($password, $username);
 
         if ($user) {
             // Đăng nhập thành công
             $_SESSION["user_id"] = $user["user_id"];
             $_SESSION["username"] = $user["username"];
+            $_SESSION["role"] = $user["role"];
 
-            header("Location: ../index.php");
+            // Redirect dựa vào vai trò của người dùng
+            if ($_SESSION["role"] == "admin") {
+                header("Location: admin"); // Điều hướng đến trang quản trị admin
+            } else {
+                header("Location: index.php"); // Điều hướng đến trang chính
+            }
             exit();
         } else {
             // Đăng nhập không thành công, hiển thị thông báo lỗi
@@ -30,17 +36,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (isset($_POST["register"])) {
         // Xử lý đăng ký
         $email = $_POST["email"];
+        $username = $_POST["username"];
         $password = $_POST["password"];
-        $fullName = $_POST["fullName"];
-
+        
         // Kiểm tra tính hợp lệ của dữ liệu đăng ký
-        if (empty($email) || empty($password) || empty($fullName)) {
+        if (empty($username) ||empty($email) ||  empty($password) ) {
             $error_message = "All fields are required for registration";
         } else {
             // Sử dụng prepared statements để tránh SQL Injection
-            them_khach_hang($password, $fullName, $email);
+            
+            them_khach_hang($username,$password,  $email);
 
-            header("Location: login.php");
+            header("Location: index.php?act=login");      
             exit();
         }
     }
@@ -71,9 +78,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" name="fullName" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="username" placeholder="Name">
                 <input type="password" name="password" placeholder="Password">
+                <input type="email" name="email" placeholder="Email">
+                
                 <button type="submit" name="register">Sign Up</button>
             </form>
         </div>
@@ -87,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="text" name="full_name" placeholder="User">
+                <input type="text" name="username" placeholder="User">
                 <input type="password" name="password" placeholder="Password">
                 <a href="#">Forget Your Password?</a>
                 <button type="submit" name="login">Sign In</button>

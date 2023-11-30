@@ -1,11 +1,17 @@
 <?php
 // views/header.php
 
+if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
+    session_unset(); // Xóa tất cả các biến session
+    session_destroy(); // Hủy phiên session
+}
+
 // Ensure no output has been sent to the browser before starting the session
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -20,7 +26,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Other CSS and JS files with root-relative paths -->
+    <!-- Other CSS and JS files with root-relative paths -->
 
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -36,22 +42,22 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <body>
     <!-- header -->
-    <header class="header-area header-three">  
-			<div id="header-sticky" class="menu-area">
-                <div class="container">
-                    <div class="second-menu">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
-                                </div>
+    <header class="header-area header-three">
+        <div id="header-sticky" class="menu-area">
+            <div class="container">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
                             </div>
-                            <div class="col-xl-8 col-lg-8">
-                              
-                                <div class="main-menu text-right text-xl-right">
-                                    <nav id="mobile-menu" style="display: block;">
-                                        <ul>
-                                            <li class="sub">
+                        </div>
+                        <div class="col-xl-8 col-lg-8">
+
+                            <div class="main-menu text-right text-xl-right">
+                                <nav id="mobile-menu" style="display: block;">
+                                    <ul>
+                                        <li class="sub">
 												<a href="index.php?act=home">Home</a>
 											</li>
                                             <li><a href="index.php?act=home">About Us</a></li>
@@ -75,30 +81,33 @@ if (session_status() === PHP_SESSION_NONE) {
 													<li><a href="blog-details.html">News Details</a></li>
 												</ul>
                                             </li>
-                                                                        
-										  
-                                            <li><a href="contact.html">Contact</a></li>                                               
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>   
-                            <div class="col-xl-2 col-lg-2 text-right d-none d-xl-block mt-30 mb-30">
-                                <div class="search-top2">
-                                   <ul>
-                                       
-                                        <li><a href="#" class="menu-tigger"><i class="fas fa-search"></i></a></li>
-                                        <li><a href="#" class="menu-tigger"><img src="img/icon/menu.png" alt="logo"></a></li>
+                                        <?php
+                                        if (isset($_SESSION['username'])) {
+                                        ?>
+                                            <li><a href="">Contact Us </a></li>
+                                            <li><a href="index.php?dangxuat=1">Log Out</a></li>
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <li><a href="index.php?act=login">Sign In</a></li>
+
+                                        <?php
+                                        }
+                                        ?>
+
+
                                     </ul>
-                                </div>
+                                </nav>
                             </div>
-                          
-                            
-                                <div class="col-12">
-                                    <div class="mobile-menu"></div>
-                                </div>
+                        </div>
+
+
+
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- header-end -->
+        </div>
+    </header>

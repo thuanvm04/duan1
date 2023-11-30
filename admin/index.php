@@ -65,11 +65,12 @@ if (isset($_GET['act'])) {
                 $buoihoc = $_POST['buoi_hoc'];
                 $giangvien = $_POST['giang_vien'];
                 $thoigian = $_POST['thoigian'];
+                $intro = $_POST['intro'];
                 $file = $_FILES['hinh'];
                 $hinh = $file['name'];
                 move_uploaded_file($file['tmp_name'], "./image/" . $hinh);
 
-                add_course($ten_kh, $mo_ta, $hinh, $giangvien, $don_gia, $danhmuc, $buoihoc,$thoigian);
+                add_course($ten_kh, $mo_ta, $hinh, $giangvien, $don_gia, $danhmuc, $buoihoc,$thoigian,$intro);
                 $thongbao = "Thêm thành công";
             }
             $danhmuc = danhmuc_selectAll();
@@ -119,6 +120,7 @@ if (isset($_GET['act'])) {
                 $instructor = $_POST['giangvien'];
                 $lesson_id = $_POST['lesson'];
                 $thoigian=$_POST['thoigian'];
+                $intro=$_POST['intro'];
                 $file = $_FILES['hinh'];
                 if ($file['size'] > 0) {
                     $hinh = $file['name'];
@@ -128,7 +130,7 @@ if (isset($_GET['act'])) {
                     $hinh = $_POST['old_image'];
                 }
                 // them_hang_hoa($ten_hh, $don_gia, $hinh,  $mo_ta,  $ma_loai);
-                cap_nhat_kh($course_name,$description,$hinh, $instructor,  $price,$category_id, $lesson_id,$thoigian ,$course_id);
+                cap_nhat_kh($course_name,$description,$hinh, $instructor,  $price,$category_id, $lesson_id,$thoigian,$intro ,$course_id);
              
                 $thongbao = "cập nhật thành công";
             }

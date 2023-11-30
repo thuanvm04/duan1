@@ -1,23 +1,23 @@
 <?php
 
-require_once "pdo.php";
+
 
 // Thêm khách hàng
-function them_khach_hang($mat_khau, $ho_ten, $email) {
-    $sql = "INSERT INTO users(password, full_name, email) VALUES (?, ?, ?)";
-    pdo_execute($sql, $mat_khau, $ho_ten, $email);
+function them_khach_hang($username, $password, $email) {
+    $sql = "INSERT INTO users(password, username, email, role) VALUES (?, ?, ?, ?)";
+    pdo_execute($sql, $password, $username, $email, 'user');
 }
 
 // Đăng nhập
-function check_user($mat_khau, $ho_ten) {
-    $sql = "SELECT * FROM users WHERE password=? AND full_name=?";
-    return pdo_query_one($sql, $mat_khau, $ho_ten);
+function check_user($password, $username) {
+    $sql = "SELECT * FROM users WHERE password=? AND username=?";
+    return pdo_query_one($sql,$password, $username);
 }
 
 // Sửa khách hàng
-function sua_khach_hang($ma_kh, $mat_khau, $ho_ten, $email) {
-    $sql = "UPDATE users SET password = ?, full_name = ?, email = ? WHERE user_id = ?";
-    pdo_execute($sql, $mat_khau, $ho_ten, $email, $ma_kh);
+function sua_khach_hang($ma_kh, $mat_khau, $ho_ten, $email,$username) {
+    $sql = "UPDATE users SET password = ?, full_name = ?, email = ?, username =? WHERE user_id = ?";
+    pdo_execute($sql, $mat_khau, $ho_ten, $email,$username, $ma_kh);
 }
 
 // Xóa khách hàng

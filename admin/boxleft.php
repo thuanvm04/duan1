@@ -9,16 +9,10 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/contentadmin.css">
-<<<<<<< HEAD
-	
 
-
-	
 	<title>ADMIN E-DEV💕</title>
 
-=======
-	<title>ADMIN DEV💕</title>
->>>>>>> 46db43c4e70bcd3cb63a4046e29f8a4fbf2a5d2f
+
 </head>
 <body>
 
@@ -57,13 +51,8 @@
 					<span class="text">TỔNG TIỀN</span>
 				</a>
 			</li>
-<<<<<<< HEAD
-			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'binhluan') ? 'active' : ''; ?>">
-				<a href="index.php?act=binhluan">
-=======
-			<li>
+			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'dsbl') ? 'active' : ''; ?>">
 				<a href="index.php?act=dsbl">
->>>>>>> 46db43c4e70bcd3cb63a4046e29f8a4fbf2a5d2f
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">BÌNH LUẬN</span>
 				</a>
@@ -83,7 +72,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="logout">
+				<a href="logout.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>
