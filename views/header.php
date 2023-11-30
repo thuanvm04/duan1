@@ -38,6 +38,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylelogin.css">
 </head>
 
 <body>
@@ -47,7 +49,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="container">
                 <div class="second-menu">
                     <div class="row align-items-center">
-                        <div class="col-xl-2 col-lg-2">
+                        <div class="col-xl-2 col-lg-2" style="height: 120px;">
                             <div class="logo">
                                 <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
                             </div>

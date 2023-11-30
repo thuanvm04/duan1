@@ -54,21 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/stylelogin.css">
-    <title>Modern Login Page | AsmrProg</title>
-</head>
+
 
 <body>
 
-    <div class="container" id="container">
-        <div class="form-container sign-up">
+    <div class="containerr" id="containerr">
+        <div class="form-containerr sign-up">
             <form action="index.php?act=login" method="post" id="registerForm">
                 <h1>Create Account</h1>
                 <div class="social-icons">
@@ -85,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit" name="register">Sign Up</button>
             </form>
         </div>
-        <div class="form-container sign-in">
+        <div class="form-containerr sign-in">
             <form action="index.php?act=login" method="post" id="loginForm">
                 <h1>Sign In</h1>
                 <div class="social-icons">
@@ -101,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit" name="login">Sign In</button>
             </form>
         </div>
-        <div class="toggle-container">
+        <div class="toggle-containerr">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
@@ -120,4 +112,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="js/login.js"></script>
 </body>
 
-</html>
+
