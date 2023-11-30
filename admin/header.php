@@ -11,7 +11,7 @@ if (!isset($_SESSION['username'])) {
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Lập trình không khó</a>
+			<a href="#" class="nav-link">Lập trình không khó</a>git 
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
