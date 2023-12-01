@@ -54,7 +54,9 @@
 .fix {
 	overflow: hidden
 }
-a,
+.ml15 {
+    margin-left: 10px;
+}
 .button {
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
@@ -9065,4 +9067,72 @@ div.single-cta:last-child {
 }
 .courses-area{
     margin-bottom: 50px;
+}
+.form_dm_listkh{
+    margin-left: 30px;
+    width: 130px;
+    height: 25px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+.danhmuc{
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+    width: 130px;
+    height: 25px;
+}
+.danhmuc_option {
+    background-color: #fe8366;
+    color: black;
+    border: none;
+    width: 90px;
+    padding: 2px;
+}
+.bgr_danhmuc{
+    color: black;
+    
+    }
+.container5 {
+    max-width: 600px; /* Đặt chiều rộng tối đa cho phần container */
+    margin: 0 auto; /* Canh giữa form trên màn hình */
+    padding: 20px; /* Thêm padding để tạo khoảng trắng xung quanh form */
+    background-color: #f9f9f9; /* Màu nền cho form */
+    border-radius: 8px; /* Bo tròn góc của form */
+    box-shadow: 0 1px 2px 0 rgba(39, 147, 231, 0.1), 0 2px 6px 2px rgba(0, 136, 240, 0.15);
+    margin-bottom: 100px;
+
+}
+
+/* Thiết lập kiểu cho các nhãn (labels) */
+label {
+    display: block; /* Hiển thị nhãn theo dạng block để đặt xuống dòng */
+    margin-bottom: 8px; /* Khoảng cách giữa các nhãn */
+    font-weight: bold; /* In đậm font chữ của nhãn */
+}
+
+/* Thiết lập kiểu cho input fields */
+input {
+    width: 100%; /* Đặt chiều rộng của input là 100% để điền vào phần container */
+    padding: 10px; /* Kích thước padding cho input fields */
+    margin-bottom: 15px; /* Khoảng cách giữa các input fields */
+    border: 1px solid #ccc; /* Đường viền của input fields */
+    border-radius: 4px; /* Bo tròn góc của input fields */
+    box-sizing: border-box; /* Đảm bảo rằng padding và border được tính vào kích thước tổng cộng của input */
+}
+
+/* Thiết lập kiểu cho nút Submit */
+.submit_pay {
+    background-color: #3498db; /* Màu nền cho nút Submit */
+    color: #fff; /* Màu chữ cho nút Submit */
+    cursor: pointer; /* Biến con trỏ thành bàn tay khi rê chuột lên nút Submit */
+    padding: 12px 20px; /* Kích thước padding cho nút Submit */
+    border: none; /* Không có đường viền cho nút Submit */
+    border-radius: 4px; /* Bo tròn góc của nút Submit */
+}
+
+/* Thiết lập kiểu cho nút Submit khi rê chuột lên */
+.submit_pay:hover {
+    background-color: #2980b9; /* Màu nền thay đổi khi rê chuột lên nút Submit */
 }

@@ -150,14 +150,19 @@
                 <div class="col-lg-12 col-md-12">
 
                     <div class="featured-courses-active">
-
-                        <div class="box-courses">
-                            <a href="courses-details.html"><img src="img/featured-courses/courses-img1.png" alt="courses-img1"></a>
+                    <?php
+            foreach ($khnew as $kh) {
+                extract($kh);
+                
+                 echo '       <div class="box-courses">
+                            <a href="index.php?act=detail&spct='.$course_id.'"><img src="../admin/image/' . $image . '"></a>
                             <div class="text">
-                                <h5>time</h5>
-                                <h3><a href="courses-details.html">name</a></h3>
+                                <h5>'.$thoigian.'</h5>
+                                <h3><a href="index.php?act=detail&spct='.$course_id.'">'.$course_name.'</a></h3>
                             </div>
-                        </div>
+                        </div>';
+                    }
+                    ?>
                     </div>
                 </div>
             </div>
@@ -179,9 +184,13 @@
                     </div>
 
                 </div>
-
+              
+                <div class="mb" id="binhluan"></div>
                 <div class="col-lg-6">
                     <div class="testimonial-active">
+                       
+                    <?php   foreach ($listbl as $lbl): { ?>
+                    
                         <div class="single-testimonial">
                             <div class="testi-author">
                                 <img src="img/testimonial/testi_avatar.png" alt="img">
@@ -193,27 +202,15 @@
                             <div class="qt-img">
                                 <img src="img/testimonial/qt-icon.png" alt="img">
                             </div>
-                            <p>Hiển thị bình luận</p>
+                            <p><?= $lbl['content'] ?></p>
 
-                        </div>
-                        <div class="single-testimonial">
-                            <div class="testi-author">
-                                <img src="img/testimonial/testi_avatar.png" alt="img">
-                                <div class="ta-info">
-                                    <h6>Name khách hàng</h6>
-                                    <span>Student</span>
-                                </div>
-                            </div>
-                            <div class="qt-img">
-                                <img src="img/testimonial/qt-icon.png" alt="img">
-                            </div>
-                            <p>Hiển thị bình luận</p>
-
-                        </div>
-                    </div>
+                        </div>  
+               <?php } endforeach; ?>
+                    
                 </div>
             </div>
         </div>
+       
     </section>
 
     <!-- testimonial-area-end -->

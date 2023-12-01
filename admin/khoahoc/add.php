@@ -46,16 +46,26 @@
             <input type="text" name="giang_vien" placeholder="Nhập vào tên giảng viên">
           </div>
           <!-- thời gian -->
-           <!-- Giáo viên-->
            <div class="row2 mb10  form_content_container">
            <H1>THỜI GIAN</H1><br>
             <input type="text" name="thoigian" placeholder="Thời gian khoá học">
           </div>
-          <!-- intro -->
-          <div class="row2 mb10  form_content_container">
-           <H1>INTRO</H1><br>
-            <input type="text" name="intro" placeholder="Intro">
+           <!-- thời gian -->
+           <div class="row2 mb10  form_content_container">
+           <H1>THỜI GIAN BẮT ĐẦU</H1><br>
+            <input type="time" name="time_start" placeholder="Thời gian bắt đầu">
           </div>
+           <!-- thời gian -->
+           <div class="row2 mb10  form_content_container">
+           <H1>THỜI GIAN KẾT THÚC</H1><br>
+            <input type="time" name="time_end" placeholder="Thời gian kết thúc">
+          </div>
+           <!-- thời gian -->
+           <div class="row2 mb10  form_content_container">
+           <H1>PHÒNG HỌC</H1><br>
+            <input type="text" name="classname" placeholder="Phòng học">
+          </div>
+          
          <!-- Buổi học -->
          <div class="row2 mb10">
            <H1>BUỔI HỌC</H1> <br>
@@ -70,6 +80,11 @@
               ?>
             </select>
          
+          </div>
+          <!-- intro -->
+          <div class="row2 mb10  form_content_container">
+           <H1>INTRO</H1><br>
+            <input type="text" name="intro" placeholder="Intro">
           </div>
           <div class="row mb10 btn_adddm">
           <input class="mr20" type="submit" name="themmoi" value="THÊM MỚI">

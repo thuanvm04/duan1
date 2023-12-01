@@ -11,12 +11,9 @@
                 
                 <th>MÃ KHOÁ HỌC</th>
                 <th>TÊN KHOÁ HỌC</th>
-<<<<<<< HEAD
-                
-=======
                 <th>HÀNH ĐỘNG</th>
                 <th></th>
->>>>>>> 68016c548875db1a36b262b0ac0e6f35b6990342
+
             </tr>
 
             <?php

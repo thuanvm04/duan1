@@ -1,9 +1,10 @@
-<div class="row2">
+<main>
+<div class="row2 container">
     <div class="row2 font_title mt-5"><h1>DANH SÁCH BÌNH LUẬN</h1></div>
     <div class="row2 form_content ">
         <form action="#" method="POST">
             <div class="row2 mb10 formds_loai"> 
-                <table class="table">
+                <table border="1">
                     <tr>
                         <th>Mã bình luận</th>
                         <th>Mã người bình luận</th>
@@ -26,7 +27,7 @@
                                     <td>'.$timestamp.'</td>
                                     <td>  
                                         <a href="'.$xoabl.'"><input type="button" value="Xóa"></a>
-                                        <a href="index.php?act=bieudobl"><input type="button" value="Biểu đồ"></a>
+                                       
                                     </td>
                                 </tr>';
                         }
@@ -36,3 +37,4 @@
         </form>   
     </div>
 </div>
+</main></section>

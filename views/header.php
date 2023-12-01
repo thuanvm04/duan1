@@ -38,6 +38,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/stylelogin.css">
 </head>
 
 <body>
@@ -47,9 +48,9 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="container">
                 <div class="second-menu">
                     <div class="row align-items-center">
-                        <div class="col-xl-2 col-lg-2">
+                        <div class="col-xl-2 col-lg-2 mb-20">
                             <div class="logo">
-                                <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                                <a href="index.php?act=home"><img src="img/logo/logo.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-8">
@@ -58,33 +59,19 @@ if (session_status() === PHP_SESSION_NONE) {
                                 <nav id="mobile-menu" style="display: block;">
                                     <ul>
                                         <li class="sub">
-												<a href="index.php?act=home">Home</a>
+												<a href="index.php?act=home">Trang chủ</a>
 											</li>
-                                            <li><a href="index.php?act=home">About Us</a></li>
+                                            <li><a href="index.php?act=home">Thông tin</a></li>
                                            
                                             <li class="sub"> 
-                                              <a href="index.php?act=course">Courses</a>
+                                              <a href="index.php?act=course">Khoá học</a>
                                                
                                             </li>
-                                             <li class="sub"> 
-                                              <a href="events.html">Events</a>
-                                            </li>
-                                            
-                                           <li class="sub"><a href="#">Pages</a>
-											
-											</li>
-                                            
-											<li class="sub"> 
-                                                <a href="blog.html">News</a>
-                                                <ul>													
-													<li><a href="blog.html">News</a></li>
-													<li><a href="blog-details.html">News Details</a></li>
-												</ul>
-                                            </li>
+                                            <li><a href="">Liên hệ </a></li>
                                         <?php
                                         if (isset($_SESSION['username'])) {
                                         ?>
-                                            <li><a href="">Contact Us </a></li>
+                                          
                                             <li><a href="index.php?dangxuat=1">Log Out</a></li>
                                         <?php
                                         } else {

@@ -55,6 +55,21 @@ if(is_array($kh)){
             <label> THỜI GIAN </label> <br>
             <input type="text" name="thoigian" value="<?=$thoigian?>" placeholder="nhập thời gian ">
           </div>
+           <!-- intro -->
+           <div class="row2 mb10 form_content_container">
+            <label> THỜI GIAN BẮT ĐẦU</label> <br>
+            <input type="text" name="time_start" value="<?=$time_start?>" placeholder="nhập intro ">
+          </div>
+           <!-- intro -->
+           <div class="row2 mb10 form_content_container">
+            <label> THỜI GIAN KẾT THÚC</label> <br>
+            <input type="text" name="time_end" value="<?=$time_end?>" placeholder="nhập intro ">
+          </div>
+           <!-- intro -->
+           <div class="row2 mb10 form_content_container">
+            <label> TÊN LỚP</label> <br>
+            <input type="text" name="classname" value="<?=$classname?>" placeholder="nhập intro ">
+          </div>
           <!-- intro -->
           <div class="row2 mb10 form_content_container">
             <label> INTRO</label> <br>

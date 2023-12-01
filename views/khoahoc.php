@@ -1,4 +1,3 @@
-
 <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.png)">
     <div class="container">
         <div class="row align-items-center">
@@ -10,7 +9,22 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php?act=home">Trang chủ</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+                                    <li class="breadcrumb-item active">
+                                        <form action="index.php?act=listkh_view" method="POST" class="row2 breadcrumb">
+                                            <input class="ml15 form_dm_listkh" type="text" name="key" width="30px">
+                                            <select name="danhmuc" class="ml15 danhmuc">
+                                                <!-- <option value="" selected>DANH MỤC</option> -->
+                                                <?php
+                                                foreach ($danhmuc as $dm) {
+                                                    extract($dm);
+                                                    echo '<option class=bgr_danhmuc value="' . $category_id . '">' . $category_name . '</option>';
+                                                }
+                                                ?>
+                                            </select>
+
+                                            <input class="danhmuc_option ml15" type="submit" name="listloc" value="TÌM KIẾM">
+                                        </form>
+                                    </li>
                                 </ol>
                             </nav>
                         </div>
@@ -21,24 +35,31 @@
     </div>
 </section>
 <!-- breadcrumb-area-end -->
-
+<div class="section-title center-align text-center mt-50">
+    <H1>TẤT CẢ KHOÁ HỌC</H1>
+</div>
 
 <section class="shop-area pt-120 pb-120 p-relative " style=" background-image: url(../img/bg/blog-bg-aliments.png); background-repeat: no-repeat; background-position: center center;background-attachment: fixed;">
     <div class="container">
         <div class="row align-items-center">
             <?php
-            foreach ($khnew as $kh) {
+            if (isset($_POST['listloc'])) {
+                $temp = $view;
+            } else {
+                $temp = $khnew;
+            }
+            foreach ($temp as $kh) {
                 extract($kh);
                 $lessonId = $lesson_id;
-                $lessonName = getLessonName($lessonId);  
-               
-if (is_array($lessonName)) {
-    $lessonName = implode(', ', $lessonName);
-}           
+                $lessonName = getLessonName($lessonId);
+
+                if (is_array($lessonName)) {
+                    $lessonName = implode(', ', $lessonName);
+                }
                 echo '    <div class="col-lg-4 col-md-6">
                 <div class="product couress-box mb-40">
                     <div class="product__img">
-                        <a href="index.php?act=detail&spct='.$course_id.'"><img src="../admin/image/' . $image . '" alt=""></a>
+                        <a href="index.php?act=detail&spct=' . $course_id . '"><img src="../admin/image/' . $image . '" alt=""></a>
                         <div class="mb">
                         
    
@@ -65,18 +86,18 @@ if (is_array($lessonName)) {
                         <p>' . $description . '</p>
                         <ul class="course-meta desc">
                             <li>
-                                <h6>1 year</h6>
-                                <span> Course</span>
+                                <h6>'.$thoigian.'</h6>
+                                <span> KHOÁ HỌC</span>
                             </li>
 
                             <li>
-                                <h6>25</h6>
-                                <span> Class Size</span>
+                                <h6>'.$classname.'</h6>
+                                <span>LỚP</span>
                             </li>
 
                             <li>
-                                <h6><span class="course-time">'.$lessonName.'</span></h6>
-                                <span> Class Duration</span>
+                                <h6><span class="course-time">' . $lessonName . '</span></h6>
+                                <span>BUỔI HỌC</span>
                             </li>
                         </ul>
 

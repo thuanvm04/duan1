@@ -45,12 +45,6 @@
 					<span class="text">KHOÁ HỌC</span>
 				</a>
 			</li>
-			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'tongtien') ? 'active' : ''; ?>">
-				<a href="index.php?act=tongtien">
-					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">TỔNG TIỀN</span>
-				</a>
-			</li>
 			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'dsbl') ? 'active' : ''; ?>">
 				<a href="index.php?act=dsbl">
 					<i class='bx bxs-message-dots' ></i>

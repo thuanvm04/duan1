@@ -54,13 +54,13 @@
                     <div class="col-xl-12 col-lg-12">
                         <div class="breadcrumb-wrap text-left">
                             <div class="breadcrumb-title">
-                                <h2>Courses Details</h2>
+                                <h2>CHI TIẾT KHOÁ HỌC</h2>
                                 <div class="breadcrumb-wrap">
 
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+                                            <li class="breadcrumb-item"><a href="index.php?act=home">TRANG CHỦ</a></li>
+                                           
                                         </ol>
                                     </nav>
                                 </div>
@@ -99,12 +99,12 @@
                                         </div>
                                         <div class="text">
                                             <a href="#"><?php echo $course['instructor']; ?></a>
-                                            <p>Teacher</p>
+                                            <p>Giảng viên</p>
                                         </div>
                                     </li>
                                     <li class="categories">
                                         <a href="#" class="course-name"><?php echo $course['course_name']; ?></a>
-                                        <p>Lesson Name</p>
+                                        <p>Tên khoá học</p>
                                     </li>
                                 </ul>
                                 <div class="upper-box">
@@ -126,56 +126,52 @@
                             <table class="table table-bordered mb-30">
 													<thead>
 														<tr>
-															<th>Qualification</th>
-															<th>Length</th>
-															<th>Code</th>
+															<th>Trình độ chuyên môn</th>
+															<th>Thời gian</th>
+															<th>Ngôn ngữ</th>
 														</tr>
 													</thead>
 													<tbody>
 														<tr>
-															<td>Bsc (Hons)</td>
-															<td>3 years full time</td>
-															<td>CDX3</td>
+															<td>Pro</td>
+															<td><?php echo $course['thoigian']; ?></td>
+															<td><?php echo $course['course_name']; ?></td>
 														</tr>
-														<tr>
-															<td>Bsc </td>
-															<td>4 years full time</td>
-															<td>CDX4</td>
-														</tr>
+														
 													</tbody>
 												</table>
-                            <h4>What You Will Learn</h4>
-                            <p> Fusce eleifend donec sapien sed phase lusa pellentesque lacus.Vivamus lorem arcu semper duiac. Cras ornare arcu avamus nda leo Etiam ind arcu. Morbi justo mauris tempus pharetra interdum at congue semper purus. Lorem ipsum dolor sit </p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            <h4>BẠN SẼ HỌC ĐƯỢC NHỮNG GÌ</h4>
+                            <p> "Mỗi dòng code bạn viết là như một cây cầu nối giữa khả năng sáng tạo của bạn và thế giới số, mở ra những cánh cửa mới của trải nghiệm và tương tác." </p>
+                            <p> "Dòng code không chỉ là những kí tự đơn thuần, mà là những chương trình nhỏ nằm trong hệ sinh thái lớn, góp phần tạo ra những trải nghiệm tương tác và ảo diệu." </p>
                             <ul class="pr-ul">
                                 <li>
                                     <div class="icon"><i class="fal fa-check"></i></div>
                                     <div class="text">
-                                       Crawl accessibility so engines can read your website
+                                    "Lập trình không phải là về việc nhớ mọi điều, mà là về cách bạn giải quyết vấn đề và tìm kiếm thông tin.
                                     </div>
                                 </li>
                                 <li>
                                     <div class="icon"><i class="fal fa-check"></i></div>
                                     <div class="text">
-                                        Share-worthy content that earns links, citations
+                                    "Không có gì là không thể trong lập trình, chỉ là có những giải pháp chưa được tìm ra."
                                     </div>
                                 </li>
                                  <li>
                                     <div class="icon"><i class="fal fa-check"></i></div>
                                     <div class="text">
-                                      Keyword optimized to attract searchers & engines
+                                    "Khám phá, học hỏi và không ngừng cải tiến - đó là chìa khóa để trở thành một lập trình viên xuất sắc.
                                     </div>
                                 </li>
                                  <li>
                                     <div class="icon"><i class="fal fa-check"></i></div>
                                     <div class="text">
-                                       Title, URL, & description to draw high CTR in the rankings
+                                    "Không phải ai cũng bắt đầu từ sự hoàn hảo. Quan trọng là hành trình của bạn và sự kiên trì để tiếp tục học hỏi."
                                     </div>
                                 </li>
                                 <li>
                                     <div class="icon"><i class="fal fa-check"></i></div>
                                     <div class="text">
-                                       Great user experience including a fast load speed
+                                    "Mỗi dòng code là một cơ hội để làm cho thế giới trở nên tốt đẹp hơn."
                                     </div>
                                 </li>
                                
@@ -194,15 +190,29 @@
                                                 <!-- Additional details here -->
                                             </ul>
                                             <h6 class="pt-20 pb-20">HỌC PHÍ: <span><?php echo $course['price']; ?></span></h6>
-                                            <a class="btn ss-btn" href="#">ĐĂNG KÍ KHOÁ HỌC</a>
+                                         
+                                                <?php
+                                                if (isset($_SESSION['username'])) {
+                                                ?>
+                                                  
+                                                  <a class="btn ss-btn" href="index.php?act=pay">ĐĂNG KÍ KHOÁ HỌC</a>
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <a class="btn ss-btn" href="index.php?act=login">ĐĂNG KÍ KHOÁ HỌC</a>
+        
+                                                <?php
+                                                }
+                                                ?>
                                         </div>
                                         <section id="categories-1" class="widget widget_categories">
-                             <h2 class="widget-title">Categories</h2>
+                             <h2 class="widget-title">THÔNG TIN KHOÁ HỌC</h2>
+            
                              <ul>
-                                <li class="cat-item cat-item-16"><a href="#">Branding</a> (4)</li>
-                                <li class="cat-item cat-item-23"><a href="#">Corporat</a> (3)</li>
-                                <li class="cat-item cat-item-18"><a href="#">Design</a> (3)</li>
-                                <li class="cat-item cat-item-22"><a href="#">Gallery</a> (3)</li>
+                                <li class="cat-item cat-item-16"><a href="#">Lớp học</a> <?php echo $course['classname']; ?></li>
+                                <li class="cat-item cat-item-23"><a href="#">Bắt đầu</a> <?php echo $course['time_start']; ?></li>
+                                <li class="cat-item cat-item-18"><a href="#">Kết thúc</a> <?php echo $course['time_end']; ?></li>
+                                <li class="cat-item cat-item-22"><a href="#">Giáo viên</a> <?php echo $course['instructor']; ?></li>
                              </ul>
                           </section>
                                     </section>
@@ -214,6 +224,15 @@
                             </div>
                         <?php endif; ?>
                     </div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $("#binhluan").load("views/formbluan.php", {
+                            course_id: <?=  $course['course_id'] ?>
+                        });
+                    });
+                </script>
+                <div class="mb" id="binhluan"></div>
 
                 </div>
                 

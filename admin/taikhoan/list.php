@@ -12,7 +12,6 @@
                 <th>Tên Tài Khoản</th>
                 <th>Mật khẩu</th>
                 <th>Email</th>
-                <th>Tên Người Dùng</th>
                 <th>Ngày Tạo Tài Khoản</th>
                 <th>Vai Trò</th>
                 <th>Hành Động</th>
@@ -30,7 +29,7 @@
                             <td>'.$username.'</td>
                             <td>'.$password.'</td>
                             <td>'.$email.'</td>
-                            <td>'.$full_name.'</td>
+                           
                             <td>'.$registration_date.'</td>
                             <td>'.$role.'</td>
                             <td> 

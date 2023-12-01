@@ -7,18 +7,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-}
 
-.container{
-    background-color: #fff;
+
+.containerr{
+    display: flex;
+    justify-items: center;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
@@ -26,27 +19,30 @@ body{
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    margin: 150px auto;
+
+    
 }
 
-.container p{
+.containerr p{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span{
+.containerr span{
     font-size: 12px;
 }
 
-.container a{
+.containerr a{
     color: #333;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.container button{
+.containerr button{
     background-color: #512da8;
     color: #fff;
     font-size: 12px;
@@ -60,12 +56,12 @@ body{
     cursor: pointer;
 }
 
-.container button.hidden{
+.containerr button.hidden{
     background-color: transparent;
     border-color: #fff;
 }
 
-.container form{
+.containerr form{
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -75,7 +71,7 @@ body{
     height: 100%;
 }
 
-.container input{
+.containerr input{
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -86,7 +82,7 @@ body{
     outline: none;
 }
 
-.form-container{
+.form-containerr{
     position: absolute;
     top: 0;
     height: 100%;
@@ -99,7 +95,7 @@ body{
     z-index: 2;
 }
 
-.container.active .sign-in{
+.containerr.active .sign-in{
     transform: translateX(100%);
 }
 
@@ -110,7 +106,7 @@ body{
     z-index: 1;
 }
 
-.container.active .sign-up{
+.containerr.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -143,7 +139,7 @@ body{
     height: 40px;
 }
 
-.toggle-container{
+.toggle-containerr{
     position: absolute;
     top: 0;
     left: 50%;
@@ -155,7 +151,7 @@ body{
     z-index: 1000;
 }
 
-.container.active .toggle-container{
+.containerr.active .toggle-containerr{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
@@ -173,7 +169,7 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.container.active .toggle{
+.containerr.active .toggle{
     transform: translateX(50%);
 }
 
@@ -196,7 +192,7 @@ body{
     transform: translateX(-200%);
 }
 
-.container.active .toggle-left{
+.containerr.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -205,6 +201,6 @@ body{
     transform: translateX(0);
 }
 
-.container.active .toggle-right{
+.containerr.active .toggle-right{
     transform: translateX(200%);
 }

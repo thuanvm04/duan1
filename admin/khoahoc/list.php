@@ -23,13 +23,16 @@
         <table border="1" cellpadding="10px">
           <tr>
 
-            <th>MÃ KHOÁ HỌC</th>
+           
             <th>TÊN KHOÁ HỌC</th>
             <th>MÔ TẢ</th>
             <th>HÌNH ẢNH</th>
             <th>GIẢNG VIÊN</th>
             <th>HỌC PHÍ</th>
-            <th>THỜI GIAN</th>
+            <th>THỜI GIAN KHOÁ HỌC</th>
+            <th>THỜI GIAN BẮT ĐẦU</th>
+            <th>THỜI GIAN KẾT THÚC</th>
+            <th>LỚP HỌC</th>
             <th>INTRO</th>
             <th>HÀNH ĐỘNG</th>
          
@@ -45,13 +48,16 @@
 
             echo '<tr>
                            
-                            <td>' . $course_id . '</td>
+                          
                             <td>' . $course_name . '</td>
                             <td>' . $description . '</td>
                             <td> <img src="./image/' . $image . '" alt="" width="100px"> </td>
                             <td>' . $instructor . '</td>
                             <td>' . $price . '</td>
                             <td>' . $thoigian. '</td>
+                            <td>' . $time_start. '</td>
+                            <td>' . $time_end. '</td>
+                            <td>' . $classname. '</td>
                             <td>' . $intro. '</td>
                             <td class="btn_listdm"> 
                                 <a href="' . $suakh . '"><input class="btn_edit_listdm" type="button" value="Sửa"></a>  
