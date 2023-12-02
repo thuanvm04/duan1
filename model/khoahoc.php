@@ -17,12 +17,15 @@ function lesson_selectAll(){
 }
 function khoahoc_selectAll($key, $category_id){
     $sql = "SELECT * FROM courses WHERE 1";
-    if ($key != "") {
-        $sql .= " AND course_name LIKE '%".$key."%'";
-    }
+    
     if ($category_id > 0) {
         $sql .= " AND category_id ='".$category_id."'";
     }
+
+    if ($key != "") {
+        $sql .= " AND course_name LIKE '%".$key."%'";
+    }
+
     $sql .=" ORDER BY course_id  DESC";
     return pdo_query($sql);
 }

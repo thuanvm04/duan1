@@ -10,10 +10,11 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php?act=home">Trang chủ</a></li>
                                     <li class="breadcrumb-item active">
-                                        <form action="index.php?act=listkh_view" method="POST" class="row2 breadcrumb">
+                                       
+                                    <form action="index.php?act=listkh_view" method="POST" class="row2 breadcrumb">
                                             <input class="ml15 form_dm_listkh" type="text" name="key" width="30px">
                                             <select name="danhmuc" class="ml15 danhmuc">
-                                                <!-- <option value="" selected>DANH MỤC</option> -->
+                                                <option value="0" selected>Tất cả</option>
                                                 <?php
                                                 foreach ($danhmuc as $dm) {
                                                     extract($dm);
@@ -24,6 +25,7 @@
 
                                             <input class="danhmuc_option ml15" type="submit" name="listloc" value="TÌM KIẾM">
                                         </form>
+                               
                                     </li>
                                 </ol>
                             </nav>

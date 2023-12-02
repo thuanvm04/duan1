@@ -1,4 +1,6 @@
-
+<?php
+// session_start();
+?>
     <!-- offcanvas-area -->
     <div class="offcanvas-menu">
         <span class="menu-close"><i class="fas fa-times"></i></span>
@@ -195,12 +197,17 @@
                                                 if (isset($_SESSION['username'])) {
                                                 ?>
                                                   
-                                                  <a class="btn ss-btn" href="index.php?act=pay">ĐĂNG KÍ KHOÁ HỌC</a>
+                                            <form action="index.php?act=pay" method="post">
+                                            <a class="btn ss-btn" name="addpay" href="index.php?act=pay">ĐĂNG KÍ KHOÁ HỌC</a>
+                                                  <input type="hidden" name="course_id" value="<?php echo $course['course_id']; ?>" ">
+                                                  <input type="hidden" name="course_name" value="<?php echo $course['course_name']; ?>" ">
+                                                  <input type="hidden" name="price" value="<?php echo $course['price']; ?>" ">
+                                            </form>
                                                 <?php
                                                 } else {
                                                 ?>
                                                     <a class="btn ss-btn" href="index.php?act=login">ĐĂNG KÍ KHOÁ HỌC</a>
-        
+                                                      
                                                 <?php
                                                 }
                                                 ?>

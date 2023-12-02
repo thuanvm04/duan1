@@ -1,65 +1,4 @@
-<<<<<<< HEAD
-=======
-<?php
- 
 
-
-// session_start();
-
-
-$error_message = "";
-
-// Xử lý khi form được submit
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["login"])) {
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-
-        // Sử dụng prepared statements để tránh SQL Injection
-        $user = check_user($password, $username);
-
-        if ($user) {
-            // Đăng nhập thành công
-            $_SESSION["user_id"] = $user["user_id"];
-            $_SESSION["username"] = $user["username"];
-            $_SESSION["role"] = $user["role"];
-
-            // Redirect dựa vào vai trò của người dùng
-            if ($_SESSION["role"] == "admin") {
-                header("Location: admin"); 
-            } else {
-                header("Location: index.php");
-            }
-            exit();
-        } else {
-            
-            $error_message = "Invalid email or password";
-        }
-    } elseif (isset($_POST["register"])) {
-        // Xử lý đăng ký
-        $email = $_POST["email"];
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        
-        // Kiểm tra tính hợp lệ của dữ liệu đăng ký
-        if (empty($username) ||empty($email) ||  empty($password) ) {
-            $error_message = "All fields are required for registration";
-        } else {
-            
-            
-            them_khach_hang($username,$password,  $email);
-
-            header("Location: index.php?act=login");      
-            exit();
-        }
-    }
-}
-?>
-
-
-
-
->>>>>>> c820ebdc0cafc07a7fa17832874fe82dc19313b5
 <body>
 
     <div class="containerr" id="containerr">
@@ -114,8 +53,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <script src="js/login.js"></script>
 </body>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> c820ebdc0cafc07a7fa17832874fe82dc19313b5

@@ -163,7 +163,14 @@ if (isset($_GET['act'])) {
             $danhsachbl = hien_thi_binh_luan();
             include "binhluan/list.php";
             break;
-
+            case 'xoabl':
+                if(isset($_GET['comment_id']) && ($_GET['comment_id'] > 0)){
+                    $id= $_GET['comment_id'];
+                    xoa_binh_luan($id);
+                }
+                $danhsachbl = hien_thi_binh_luan();
+                include "binhluan/list.php";
+                break;
         
 
             default:

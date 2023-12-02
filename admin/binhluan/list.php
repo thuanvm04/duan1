@@ -17,7 +17,7 @@
                         foreach ($danhsachbl as $dsbl) {
                             extract($dsbl);
                             // $suatk = "index.php?act=suatk&ma_kh=".$ma_kh;
-                            $xoabl = "index.php?act=xoabl&id=".$id;
+                            $xoabl = "index.php?act=xoabl&comment_id=".$comment_id;
 
                             echo '<tr>
                                     <td>'.$comment_id.'</td>

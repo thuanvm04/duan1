@@ -4,7 +4,7 @@ include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/khoahoc.php";
 include "model/binhluan.php";
-
+include "model/bill.php";
 session_start();
 
 include "views/header.php";
@@ -81,6 +81,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $danhmuc = danhmuc_selectAll();
                 include "views/khoahoc.php";
                 break;
+                case 'addpayment':
+                    if (isset($_POST['submit_pay']) && $_POST['submit_pay']) {
+                       
+                       
+        
+                        add_course($ten_kh, $mo_ta, $hinh, $giangvien, $don_gia, $danhmuc, $buoihoc,$thoigian,$intro, $time_start, $classname, $time_end);
+                        $thongbao = "Thêm thành công";
+                    }
+                    
+                    include "khoahoc/add.php";
+                    break;
         case 'course':
             include "views/khoahoc.php";
             break;
