@@ -50,6 +50,29 @@ padding: 10px;
     line-height: 30px;
     margin: 20px 20px 20px 0;
 }
+.container2{
+margin-top: 60px;
+
+}
+.home{
+ height: 76%;
+ background-image: url('../img/gallery/home_admin.jpg');
+ background-repeat: no-repeat;
+    background-size: 100%;
+}
+.row3{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.row3 ul {
+    margin-left: 0px;
+    text-align: start;
+    margin-top: 20px;
+}
+.row3 ul li{
+    line-height: 40px;
+}
 .btn_adddm{
     margin-left: 50px;
 }

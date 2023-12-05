@@ -24,12 +24,13 @@
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-sm-12">
-                    <div class="footer-widget footer-social mt-15 text-right text-xl-right">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
+                            <div class="footer-widget footer-social mt-15  text-right text-xl-right">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>  
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                     <a href="#"><i class="fab fa-twitter"></i></a>
+                                   
+                            </div>
+                        </div>
             </div>
         </div>
     </div>

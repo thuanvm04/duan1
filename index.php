@@ -84,8 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 case 'addpayment':
                     if (isset($_POST['submit_pay']) && $_POST['submit_pay']) {
                        
-                       
-        
                         add_course($ten_kh, $mo_ta, $hinh, $giangvien, $don_gia, $danhmuc, $buoihoc,$thoigian,$intro, $time_start, $classname, $time_end);
                         $thongbao = "Thêm thành công";
                     }

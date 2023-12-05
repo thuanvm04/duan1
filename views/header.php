@@ -76,7 +76,7 @@ if (session_status() === PHP_SESSION_NONE) {
                                         <?php
                                         if (isset($_SESSION['username'])) {
                                         ?>
-                                          
+                                         <li><a href="index.php?act=dadangki">Khoá học đã đăng kí </a></li>
                                             <li><a href="index.php?dangxuat=1">Log Out</a></li>
                                         <?php
                                         } else {
@@ -86,7 +86,7 @@ if (session_status() === PHP_SESSION_NONE) {
                                         <?php
                                         }
                                         ?>
-
+                                        
 
                                     </ul>
                                 </nav>

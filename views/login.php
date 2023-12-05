@@ -12,8 +12,8 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" name="username" placeholder="Name">
-                <input type="password" name="password" placeholder="Password">
+                <input type="text" name="username" placeholder="Name" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <input type="email" name="email" placeholder="Email">
                 
                 <button type="submit" name="register">Sign Up</button>
