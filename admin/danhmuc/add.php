@@ -7,10 +7,7 @@
       <div class="row2 form_content ">
         <form  action="index.php?act=adddm" method="POST">
          <div class="form_content">
-         <div class="row2 mb10 form_content_container">
-            <h3> MÃ DANH MỤC KHOÁ HỌC</h3><br>
-            <input type="text" name="category_id" placeholder="Nhập mã danh mục" disabled>
-          </div>
+        
           <div class="row2 mb10 form_content_container">
             <h3>TÊN DANH MỤC KHOÁ HỌC </h3> <br>
             <input type="text" name="category_name" placeholder="Nhập tên danh mục" required>

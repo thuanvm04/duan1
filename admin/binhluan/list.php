@@ -26,7 +26,7 @@
                                     <td>'.$content.'</td>
                                     <td>'.$timestamp.'</td>
                                     <td>  
-                                        <a href="'.$xoabl.'"><input type="button" value="Xóa"></a>
+                                        <a href="'.$xoabl.'"><input class="btn_delete_listdm" type="button" value="Xóa"></a>
                                        
                                     </td>
                                 </tr>';

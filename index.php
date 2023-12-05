@@ -76,6 +76,7 @@ if (isset($_GET['act'])) {
             }
             include "views/login.php";
             break;
+
         case 'listkh_view':
             if (isset($_POST['listloc']) && $_POST['listloc']) {
                 $key = $_POST['key'];
@@ -99,6 +100,28 @@ if (isset($_GET['act'])) {
 
             include "khoahoc/add.php";
             break;
+
+            case 'listkh_view':
+                if (isset($_POST['listloc']) && $_POST['listloc']) {
+                    $key = $_POST['key'];
+                    $category = $_POST['danhmuc'];
+                } else {
+                    $key = '';
+                    $category = 0;
+                }
+                $view =  search_selectAll_view($key, $category);
+                $danhmuc = danhmuc_selectAll();
+                include "views/khoahoc.php";
+                break;
+                case 'addpayment':
+                    if (isset($_POST['submit_pay']) && $_POST['submit_pay']) {
+                       
+                        add_course($ten_kh, $mo_ta, $hinh, $giangvien, $don_gia, $danhmuc, $buoihoc,$thoigian,$intro, $time_start, $classname, $time_end);
+                        $thongbao = "Thêm thành công";
+                    }
+                    
+                    include "khoahoc/add.php";
+                    break;
         case 'course':
             include "views/khoahoc.php";
             break;
