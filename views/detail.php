@@ -1,5 +1,7 @@
 <?php
 // session_start();
+ // Lưu giá vào phiên làm việc
+?>
 ?>
     <!-- offcanvas-area -->
     <div class="offcanvas-menu">
@@ -198,15 +200,19 @@
                                                 ?>
                                                   
                                             <form action="index.php?act=pay" method="post">
-                                            <a class="btn ss-btn" name="addpay" href="index.php?act=pay">ĐĂNG KÍ KHOÁ HỌC</a>
-                                                  <input type="hidden" name="course_id" value="<?php echo $course['course_id']; ?>" ">
-                                                  <input type="hidden" name="course_name" value="<?php echo $course['course_name']; ?>" ">
-                                                  <input type="hidden" name="price" value="<?php echo $course['price']; ?>" ">
+                                            <input type="hidden" name="instructor" value="<?php echo $course['instructor']; ?>" >
+                                            <input type="hidden" name="time_start" value="<?php echo $course['time_start']; ?>" >
+                                            <input type="hidden" name="time_end" value="<?php echo $course['time_end']; ?>" >
+                                            <input type="hidden" name="classname" value="<?php echo $course['classname']; ?>" >
+                                                  <input type="hidden" name="course_id" value="<?php echo $course['course_id']; ?>" >
+                                                  <input type="hidden" name="course_name" value="<?php echo $course['course_name']; ?>" >
+                                                  <input type="hidden" name="price" value="<?php echo $course['price']; ?>">
+                                                  <input class="btn ss-btn mb-2" name="addpay"  type="submit" value="ĐĂNG KÍ KHOÁ HỌC">
                                             </form>
                                                 <?php
                                                 } else {
                                                 ?>
-                                                    <a class="btn ss-btn" href="index.php?act=login">ĐĂNG KÍ KHOÁ HỌC</a>
+                                                    <a class="btn ss-btn" href="index.php?act=pay">ĐĂNG KÍ KHOÁ HỌC</a>
                                                       
                                                 <?php
                                                 }
