@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: http://localhost/duan1");
+header("Location: ..\index.php");
 exit();
 ?>

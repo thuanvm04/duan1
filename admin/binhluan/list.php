@@ -11,6 +11,7 @@
                         <th>Mã khóa học</th>
                         <th>Nội dung</th>
                         <th>Ngày bình luận</th>
+                        <th></th>
                     </tr>
 
                     <?php

@@ -144,8 +144,8 @@ if (isset($_POST['redirect'])) {
     
     <div class="container5">
         <!-- Hiển thị thông tin xác nhận -->
-        <h2>Thông tin đơn hàng:</h2>
-        <p><strong>Họ và tên:</strong> <?php echo $fullname; ?></p>
+        <h2>CHÚC MỪNG <?php echo $fullname; ?> ĐÃ ĐĂNG KÍ KHOÁ HỌC THÀNH CÔNG</h2>
+       
         <p><strong>Tên khóa học:</strong> <?php echo $coursename; ?></p>
         <p><strong>Giá khóa học:</strong> $<?php echo number_format($price, 2); ?></p>
         <p><strong>Email:</strong> <?php echo $email; ?></p>

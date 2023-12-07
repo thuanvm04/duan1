@@ -89,4 +89,8 @@ function load_thong_ke() {
     return pdo_query($sql);
 }
 
+function get_course_dki(){
+    $sql = "SELECT * FROM bills ";
+    return pdo_query($sql);
+}
 ?>

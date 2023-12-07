@@ -2,7 +2,7 @@
 // session_start();
  // Lưu giá vào phiên làm việc
 ?>
-?>
+
     <!-- offcanvas-area -->
     <div class="offcanvas-menu">
         <span class="menu-close"><i class="fas fa-times"></i></span>
@@ -131,7 +131,7 @@
 													<thead>
 														<tr>
 															<th>Trình độ chuyên môn</th>
-															<th>Thời gian</th>
+															<th>Thời gian bắt đầu khoá học</th>
 															<th>Ngôn ngữ</th>
 														</tr>
 													</thead>
