@@ -83,5 +83,10 @@ function getkhoahoc_user($user_id){
     WHERE en.user_id = ? ";;
     return pdo_query_one($sql, $user_id);
 }
+function load_thong_ke() {
+    $sql = "SELECT dm.category_id as madm , dm.category_name as tendm , COUNT(*) 'soluong', MIN(price) 'gia_min', MAX(price) 'gia_max', 
+    AVG(price) 'gia_avg' FROM category dm JOIN courses sp ON dm.category_id=sp.category_id GROUP BY dm.category_id, dm.category_name ORDER BY soluong DESC";
+    return pdo_query($sql);
+}
 
 ?>

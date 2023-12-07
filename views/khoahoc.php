@@ -41,7 +41,7 @@
     <H1>TẤT CẢ KHOÁ HỌC</H1>
 </div>
 
-<section class="shop-area pt-120 pb-120 p-relative " style=" background-image: url(../img/bg/blog-bg-aliments.png); background-repeat: no-repeat; background-position: center center;background-attachment: fixed;">
+<section class="shop-area pt-120 pb-120 p-relative " style=" background-image: url(img/bg/blog-bg-aliments.png); background-repeat: no-repeat; background-position: center center;background-attachment: fixed;">
     <div class="container">
         <div class="row align-items-center">
             <?php
@@ -61,7 +61,7 @@
                 echo '    <div class="col-lg-4 col-md-6">
                 <div class="product couress-box mb-40">
                     <div class="product__img">
-                        <a href="index.php?act=detail&spct=' . $course_id . '"><img src="../admin/image/' . $image . '" alt=""></a>
+                        <a href="index.php?act=detail&spct=' . $course_id . '"><img src="admin/image/' . $image . '" alt=""></a>
                         <div class="mb">
                         
    

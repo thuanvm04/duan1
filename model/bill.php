@@ -33,8 +33,8 @@
 
 //     return $invoice;
 // }
-function addbill($full_name, $email, $phone, $course_name, $course_price, $pttt, $instructor, $classname, $time_start, $time_end) {
-    $sql = "INSERT INTO bills(full_name, email, phone, course_name, course_price, pttt, instructor, classname, time_start, time_end ) VALUES ('$full_name','$email', '$phone', '$course_name', '$course_price', '$pttt', '$instructor', '$classname', '$time_start', '$time_end' )";
+function addbill($user_id, $full_name, $email, $phone, $course_name, $course_price, $pttt, $instructor, $classname, $time_start, $time_end,$timestamp) {
+    $sql = "INSERT INTO bills(user_id, full_name, email, phone, course_name, course_price, pttt, instructor, classname, time_start, time_end,timestamp ) VALUES ('$user_id','$full_name','$email', '$phone', '$course_name', '$course_price', '$pttt', '$instructor', '$classname', '$time_start', '$time_end', '$timestamp' )";
         pdo_execute($sql);
    
 }

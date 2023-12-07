@@ -171,7 +171,15 @@ if (isset($_GET['act'])) {
             $danhsachbl = hien_thi_binh_luan();
             include "binhluan/list.php";
             break;
-
+            // Thống kê
+        case 'thongke':
+            $listsp = load_thong_ke();
+            include "thongke/thongke.php";
+            break;
+        case 'bieudo':
+            $listsp = load_thong_ke();
+            include "thongke/bieudo.php";
+            break;
 
         default:
             include "home.php";

@@ -56,6 +56,11 @@
 					<i class='bx bxs-group' ></i>
 					<span class="text">THÀNH VIÊN</span>
 				</a>
+			</li><li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'thongke') ? 'active' : ''; ?>">
+				<a href="index.php?act=thongke">
+					<i class='bx bxs-group' ></i>
+					<span class="text">THỐNG KÊ</span>
+				</a>
 			</li>
 		</ul>
 		<ul class="side-menu">

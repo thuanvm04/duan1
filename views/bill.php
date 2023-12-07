@@ -3,6 +3,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lấy thông tin từ form
+    $userid = $_POST['user_id'];
     $fullname = $_POST['full_name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -25,7 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Invalid access!";
     exit();
 }
+echo $userid;
 ?>
+
 <section class="breadcrumb-area">
     <div class="container5">
         <!-- Hiển thị thông tin xác nhận -->
@@ -35,27 +38,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Giá khóa học:</strong> $<?php echo number_format($price, 2); ?></p>
         <p><strong>Email:</strong> <?php echo $email; ?></p>
         <p><strong>Số điện thoại:</strong> <?php echo $phone; ?></p>
-        
+
 
 
         <!-- Nút để xác nhận thanh toán -->
         <form action="index.php?act=invoice" method="post">
+            <input type="hidden" name="user_id" value="<?php echo $userid; ?> ">
             <input type="hidden" name="full_name" value="<?php echo $fullname; ?> ">
             <input type="hidden" name="email" value="<?php echo $email; ?>">
             <input type="hidden" name="phone" value="<?php echo $phone; ?>">
             <input type="hidden" name="address" value="<?php echo $address; ?>">
             <input type="hidden" name="course_name" value="<?php echo $coursename; ?>">
             <input type="hidden" name="course_price" value="<?php echo $price; ?>">
-            <input type="hidden" name="instructor" value="<?= $instructor ?>" >
-            <input type="hidden" name="classname" value="<?= $classname ?>" >
-            <input type="hidden" name="time_start" value="<?= $time_start ?>" >
+            <input type="hidden" name="instructor" value="<?= $instructor ?>">
+            <input type="hidden" name="classname" value="<?= $classname ?>">
+            <input type="hidden" name="time_start" value="<?= $time_start ?>">
             <input type="hidden" name="time_end" value="<?= $time_end ?>">
 
             <label for="shipping_method">Phương Thức Thanh Toán:</label>
-            <select name="pttt" required>
+            <!-- <select name="pttt" required>
                 <option value="Thanh toán tại Trung Tâm">Thanh toán tại Trung Tâm</option>
-            </select>
-            <input type="submit" class="mt-4" name="submit_pay" value="Xác nhận thanh toán">
+            </select> -->
+            <input type="submit" class="mt-4" name="redirect" value="Thanh toán Ví VNPAY">
+            <!-- <input type="submit" class="mt-4" name="submit_pay" value="Xác nhận thanh toán"> -->
         </form>
     </div>
 </section>

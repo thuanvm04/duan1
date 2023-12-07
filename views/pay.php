@@ -6,6 +6,7 @@
 if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
     // Lấy thông tin người dùng từ phiên làm việc
     $username = $_SESSION["username"];
+    $userid = $_SESSION["user_id"];
     // Lấy thêm thông tin khác nếu cần
 
 }
@@ -53,6 +54,7 @@ $price = isset($_POST['price']) ? floatval($_POST['price']) : 0;
 
             
             <input type="hidden" name="time_start" value="<?= $time_start ?>" readonly>
+            <input type="hidden" name="user_id" value="<?= $userid ?>" readonly>
 
             <input type="hidden" name="time_end" value="<?= $time_end ?>" readonly>
 

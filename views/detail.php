@@ -99,7 +99,7 @@
                                 <ul class="course-meta review style2 clearfix mb-30">
                                     <li class="author">
                                         <div class="thumb">
-                                            <img src="../img/testimonial/testi_avatar.png" alt="image">
+                                            <img src="./img/testimonial/testi_avatar.png" alt="image">
                                         </div>
                                         <div class="text">
                                             <a href="#"><?php echo $course['instructor']; ?></a>
@@ -115,7 +115,7 @@
                                     <div class="single-item-carousel owl-carousel owl-theme">
 
                                         <figure class="image">
-                                            <img src="../admin/image/<?php echo $course['image']; ?>" alt="">
+                                            <img src="admin/image/<?php echo $course['image']; ?>" alt="">
                                         </figure>
 
 
@@ -201,6 +201,7 @@
                                                   
                                             <form action="index.php?act=pay" method="post">
                                             <input type="hidden" name="instructor" value="<?php echo $course['instructor']; ?>" >
+                
                                             <input type="hidden" name="time_start" value="<?php echo $course['time_start']; ?>" >
                                             <input type="hidden" name="time_end" value="<?php echo $course['time_end']; ?>" >
                                             <input type="hidden" name="classname" value="<?php echo $course['classname']; ?>" >

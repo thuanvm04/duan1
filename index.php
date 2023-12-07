@@ -143,18 +143,21 @@ if (isset($_GET['act'])) {
             include "views/bill.php";
             break;
         case 'invoice':
-            if (isset($_POST['submit_pay']) && $_POST['submit_pay']) {
+            if (isset($_POST['redirect']) && $_POST['redirect']) {
+                $userid = $_POST['user_id'];
                 $fullname = $_POST['full_name'];
                 $email = $_POST['email'];
                 $phone = $_POST['phone'];
                 $coursename = $_POST['course_name'];
                 $price = $_POST['course_price'];
-                $pttt = $_POST['pttt'];
+                $pttt = $_POST['redirect'];
                 $instructor = $_POST['instructor'];
                 $classname = $_POST['classname'];
                 $time_start = $_POST['time_start'];
                 $time_end = $_POST['time_end'];
-                addbill($fullname, $email, $phone, $coursename, $price, $pttt, $instructor, $classname, $time_start, $time_end);
+                date_default_timezone_set('Asia/Ho_Chi_Minh');
+                $timestamp =  date("Y-m-d H:i:s");
+                addbill($userid,$fullname, $email, $phone, $coursename, $price, $pttt, $instructor, $classname, $time_start, $time_end,$timestamp);
 
                 $thongbao = "Thêm thành công";
             }
