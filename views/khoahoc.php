@@ -89,7 +89,7 @@
                         <ul class="course-meta desc">
                             <li>
                                 <h6>'.$thoigian.'</h6>
-                                <span> KHOÁ HỌC</span>
+                                <span> KHAI GIẢNG</span>
                             </li>
 
                             <li>

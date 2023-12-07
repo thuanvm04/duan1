@@ -38,7 +38,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+ 
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="css/stylelogin.css">
@@ -76,8 +76,10 @@ if (session_status() === PHP_SESSION_NONE) {
                                         <?php
                                         if (isset($_SESSION['username'])) {
                                         ?>
-                                         <li><a href="index.php?act=dadangki">Khoá học đã đăng kí </a></li>
+                                         <li><a href="index.php?act=khdadangki">Khoá học đã đăng kí </a></li>
                                             <li><a href="index.php?dangxuat=1">Log Out</a></li>
+                                            
+                                            <!-- <li><a href="http://localhost/duan1/admin/">Admin</a></li> -->
                                         <?php
                                         } else {
                                         ?>
@@ -86,8 +88,8 @@ if (session_status() === PHP_SESSION_NONE) {
                                         <?php
                                         }
                                         ?>
+                                           
                                         
-
                                     </ul>
                                 </nav>
                             </div>

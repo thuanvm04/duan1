@@ -27,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <section class="breadcrumb-area">
     <div class="container5">
         <!-- Hiển thị thông tin xác nhận -->
-        <h2>Thông tin đơn hàng:</h2>
-        <p><strong>Họ và tên:</strong> <?php echo $fullname; ?></p>
+        <h2>CHÚC MỪNG <?php echo $fullname; ?> ĐÃ ĐĂNG KÍ KHOÁ HỌC THÀNH CÔNG</h2>
+       
         <p><strong>Tên khóa học:</strong> <?php echo $coursename; ?></p>
         <p><strong>Giá khóa học:</strong> $<?php echo number_format($price, 2); ?></p>
         <p><strong>Email:</strong> <?php echo $email; ?></p>
@@ -37,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Tên Lớp:</strong> <?php echo $classname; ?></p>
         <p><strong>Thời gian bắt đầu:</strong> <?php echo $time_start; ?></p>
         <p><strong>Thời gian kết thúc:</strong> <?php echo $time_end; ?></p>
-
         <p><strong>Phương thức thanh toán:</strong> <?php echo $pttt; ?></p>
 
 

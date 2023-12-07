@@ -47,8 +47,8 @@
           </div>
           <!-- thời gian -->
            <div class="row2 mb10  form_content_container">
-           <H1>THỜI GIAN</H1><br>
-            <input type="text" name="thoigian" placeholder="Thời gian khoá học">
+           <H1>THỜI GIAN KHAI GIẢNG</H1><br>
+            <input type="text" name="thoigian" placeholder="Thời gian khai giảng khoá học">
           </div>
            <!-- thời gian -->
            <div class="row2 mb10  form_content_container">

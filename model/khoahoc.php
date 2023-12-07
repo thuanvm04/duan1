@@ -84,4 +84,8 @@ function getkhoahoc_user($user_id){
     return pdo_query_one($sql, $user_id);
 }
 
+function get_course_dki(){
+    $sql = "SELECT * FROM bills ";
+    return pdo_query($sql);
+}
 ?>

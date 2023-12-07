@@ -29,7 +29,7 @@
             <th>HÌNH ẢNH</th>
             <th>GIẢNG VIÊN</th>
             <th>HỌC PHÍ</th>
-            <th>THỜI GIAN KHOÁ HỌC</th>
+            <th>THỜI GIAN KHAI GIẢNG KHOÁ HỌC</th>
             <th>THỜI GIAN BẮT ĐẦU</th>
             <th>THỜI GIAN KẾT THÚC</th>
             <th>LỚP HỌC</th>

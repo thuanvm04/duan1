@@ -5,7 +5,7 @@
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
     // Lấy thông tin người dùng từ phiên làm việc
-    $username = $_SESSION["username"];
+    $username = $_SESSION["full_name"];
     // Lấy thêm thông tin khác nếu cần
 
 }

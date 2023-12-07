@@ -8,14 +8,16 @@ include "../model/binhluan.php";
 
 include "header.php";
 include "boxleft.php";
+ if (!isset($_SESSION["user_id"]) || empty($_SESSION["user_id"]) || $_SESSION["role"] !== "admin") {
+    
+    header("Location: ..\index.php"); 
+    exit();
+};
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
-        case 'home':
-
-            include "home.php";
-            break;
+       
 
             // Danh Mục
         case 'adddm':
