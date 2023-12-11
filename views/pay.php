@@ -5,12 +5,11 @@
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
     // Lấy thông tin người dùng từ phiên làm việc
-<<<<<<< HEAD
     $username = $_SESSION["username"];
     $userid = $_SESSION["user_id"];
-=======
+
     $username = $_SESSION["full_name"];
->>>>>>> a040a157d43437c96b17b87b3eb294e94e4bfbc2
+
     // Lấy thêm thông tin khác nếu cần
 
 }
@@ -24,6 +23,7 @@ if (isset($_SESSION["email"])) {
  // Lấy giá và tên khóa học từ POST
 $coursename = isset($_POST['course_name']) ? htmlspecialchars($_POST['course_name']) : '';
 $instructor = isset($_POST['instructor']) ? htmlspecialchars($_POST['instructor']) : '';
+$thoigian = isset($_POST['thoigian']) ? htmlspecialchars($_POST['thoigian']) : '';
 $classname = isset($_POST['classname']) ? htmlspecialchars($_POST['classname']) : '';
 $time_start = isset($_POST['time_start']) ? htmlspecialchars($_POST['time_start']) : '';  
 $time_end = isset($_POST['time_end']) ? htmlspecialchars($_POST['time_end']) : '';  // Thay bằng biến thời gian thực tế từ khóa học
@@ -55,7 +55,7 @@ $price = isset($_POST['price']) ? floatval($_POST['price']) : 0;
 
            
             <input type="hidden" name="classname" value="<?= $classname ?>" readonly>
-
+            <input type="hidden" name="thoigian" value="<?= $thoigian ?>" readonly>
             
             <input type="hidden" name="time_start" value="<?= $time_start ?>" readonly>
             <input type="hidden" name="user_id" value="<?= $userid ?>" readonly>

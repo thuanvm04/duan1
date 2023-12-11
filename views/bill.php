@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = $_POST['full_name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
+    $thoigian = $_POST['thoigian'];
     $coursename = $_POST['course_name'];
     $price = $_POST['course_price'];
     $instructor = $_POST['instructor'];
@@ -26,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Invalid access!";
     exit();
 }
-echo $userid;
+
 ?>
 
 <section class="breadcrumb-area">
@@ -35,7 +36,7 @@ echo $userid;
         <h2>Xác nhận thông tin thanh toán:</h2>
         <p><strong>Họ và tên:</strong> <?php echo $fullname; ?></p>
         <p><strong>Tên khóa học:</strong> <?php echo $coursename; ?></p>
-        <p><strong>Giá khóa học:</strong> $<?php echo number_format($price, 2); ?></p>
+        <p><strong>Giá khóa học:</strong> <?php echo number_format($price, 2); ?></p>
         <p><strong>Email:</strong> <?php echo $email; ?></p>
         <p><strong>Số điện thoại:</strong> <?php echo $phone; ?></p>
 
@@ -48,6 +49,7 @@ echo $userid;
             <input type="hidden" name="email" value="<?php echo $email; ?>">
             <input type="hidden" name="phone" value="<?php echo $phone; ?>">
             <input type="hidden" name="address" value="<?php echo $address; ?>">
+            <input type="hidden" name="thoigian" value="<?php echo $thoigian; ?>">
             <input type="hidden" name="course_name" value="<?php echo $coursename; ?>">
             <input type="hidden" name="course_price" value="<?php echo $price; ?>">
             <input type="hidden" name="instructor" value="<?= $instructor ?>">
@@ -60,6 +62,9 @@ echo $userid;
                 <option value="Thanh toán tại Trung Tâm">Thanh toán tại Trung Tâm</option>
             </select> -->
             <input type="submit" class="mt-4" name="redirect" value="Thanh toán Ví VNPAY">
+           <a href="index.php?act=invoice"> <input type="submit" class="mt-4" name="redirect-2" value="Thanh toán tại Trung tâm"></a>
+           <input type="hidden" class="mt-4" name="trangthai" value="Đã thanh toán">
+           <input type="hidden" class="mt-4" name="trangthai-2" value="Chưa thanh toán">
             <!-- <input type="submit" class="mt-4" name="submit_pay" value="Xác nhận thanh toán"> -->
         </form>
     </div>

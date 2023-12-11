@@ -14,7 +14,7 @@
       }
       ?>
     </select>
-    
+   
     <input type="submit" name="listloc" value="LỌC">
   </form>
   <div class="row2 form_content ">

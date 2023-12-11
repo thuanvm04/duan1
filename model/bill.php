@@ -33,9 +33,35 @@
 
 //     return $invoice;
 // }
-function addbill($user_id, $full_name, $email, $phone, $course_name, $course_price, $pttt, $instructor, $classname, $time_start, $time_end,$timestamp) {
-    $sql = "INSERT INTO bills(user_id, full_name, email, phone, course_name, course_price, pttt, instructor, classname, time_start, time_end,timestamp ) VALUES ('$user_id','$full_name','$email', '$phone', '$course_name', '$course_price', '$pttt', '$instructor', '$classname', '$time_start', '$time_end', '$timestamp' )";
+function addbill($user_id, $full_name, $email, $phone, $course_name, $course_price, $pttt, $instructor, $classname,$thoigian, $time_start, $time_end,$timestamp,$trangthai) {
+    $sql = "INSERT INTO bills(user_id, full_name, email, phone, course_name, course_price, pttt, instructor, classname,thoigian, time_start, time_end,timestamp ,trangthai) VALUES ('$user_id','$full_name','$email', '$phone', '$course_name', '$course_price', '$pttt', '$instructor', '$classname','$thoigian', '$time_start', '$time_end', '$timestamp' ,'$trangthai')";
         pdo_execute($sql);
    
 }
+function updatetrangthai( $newStatus ,$billId) {
+    try {
+        // Gọi hàm kết nối cơ sở dữ liệu
+        $conn = pdo_get_connection();
+
+        // Câu truy vấn cập nhật trạng thái sản phẩm
+        $sql = "UPDATE bills SET trangthai = ? WHERE bill_id = ?";
+
+        // Thực thi truy vấn
+        pdo_execute($sql, $newStatus, $billId);
+
+        // Đóng kết nối cơ sở dữ liệu
+        unset($conn);
+
+        // Trả về true nếu cập nhật thành công
+        return true;
+    } catch (PDOException $e) {
+        // Xử lý lỗi và in thông báo
+        echo "Lỗi cập nhật trạng thái sản phẩm: " . $e->getMessage();
+
+        // Trả về false nếu có lỗi
+        return false;
+    }
+}
+
+
 ?>

@@ -3,7 +3,7 @@
 
 if (isset($_POST['redirect'])) {
     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    $vnp_Returnurl = "http://localhost/duan1/index.php?act=invoice";
+    $vnp_Returnurl = "http://localhost/htdocs/duan1/index.php?act=invoice";
     $vnp_TmnCode = "064XW8TO"; //Mã website tại VNPAY 
     $vnp_HashSecret = "PBYPHCHFWNDCOURIICWZRBYJOJDOETKG"; //Chuỗi bí mật
 
@@ -115,6 +115,7 @@ if (isset($_POST['redirect'])) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $coursename = $_POST['course_name'];
+    $thoigian = $_POST['thoigian'];
     $price = $_POST['course_price'];
     $instructor = $_POST['instructor'];
     $classname = $_POST['classname'];
@@ -133,15 +134,18 @@ if (isset($_POST['redirect'])) {
     echo '
     <section class="breadcrumb-area">
     <div class="container5">
-    <label for="full_name">Cảm ơn bạn đã đăng ký khóa học</label>
+    <label class="form-label" for="full_name">  <h1>Chúc mừng bạn đã tham gia khoá học 💕</h1></label>
+    <p class="form-label">Bạn có thể lựa chọn thêm khoá học phù hợp</p>
+    <button type="button" class="btn btn-primary" ><a href="index.php?act=course">CHỌN THÊM</a></button>
 </div>
 </section>';
     exit();
 }
 
 ?>
+
 <section class="breadcrumb-area">
-    
+
     <div class="container5">
         <!-- Hiển thị thông tin xác nhận -->
         <h2>CHÚC MỪNG <?php echo $fullname; ?> ĐÃ ĐĂNG KÍ KHOÁ HỌC THÀNH CÔNG</h2>

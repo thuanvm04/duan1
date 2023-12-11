@@ -89,8 +89,34 @@ function load_thong_ke() {
     return pdo_query($sql);
 }
 
-function get_course_dki(){
-    $sql = "SELECT * FROM bills ";
+
+
+
+
+// function get_courses_dki($user_id) {
+//     $sql = "SELECT bills.*
+//     FROM bills
+//     JOIN users ON bills.full_name = users.full_name
+//     WHERE users.user_id = ?
+//     ";
+//     return pdo_query($sql, $user_id);
+// }
+// function get_courses_dki($user_id){
+//     $sql = "SELECT * FROM bills b , users u WHERE b.user_id = u.user_id AND b.user_id = ?";
+//     return pdo_query_one($sql, $user_id);
+// }
+function get_courses_dki($user_id) {
+    $sql = "SELECT * FROM bills WHERE user_id = ?";
+    return pdo_query($sql, $user_id);
+}
+function selectAll_userid() {
+    $sql = "SELECT user_id FROM users";
     return pdo_query($sql);
 }
+function get_all_courses_dki() {
+    $sql = "SELECT * FROM bills ORDER BY bill_id DESC";
+    return pdo_query($sql);
+}
+
+
 ?>

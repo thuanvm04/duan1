@@ -5,19 +5,20 @@ include "../model/danhmuc.php";
 include "../model/khoahoc.php";
 include "../model/taikhoan.php";
 include "../model/binhluan.php";
+include "../model/bill.php";
 
 include "header.php";
-include "boxleft.php";
- if (!isset($_SESSION["user_id"]) || empty($_SESSION["user_id"]) || $_SESSION["role"] !== "admin") {
-    
-    header("Location: ..\index.php"); 
+
+if (!isset($_SESSION["user_id"]) || empty($_SESSION["user_id"]) || $_SESSION["role"] !== "admin") {
+
+    header("Location: ..\index.php");
     exit();
 };
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
-       
+
 
             // Danh Mục
         case 'adddm':
@@ -183,6 +184,26 @@ if (isset($_GET['act'])) {
             include "thongke/bieudo.php";
             break;
 
+            // hoá đơn
+        case 'khoahocdki':
+            $allcourses = get_all_courses_dki();
+
+
+    //   $billId=selectone_idbill();
+     
+    //   if (is_array($billId)) {
+    //     $billId = implode(', ', $billId);
+    // }
+       
+   
+            include "khoahocdki/khoahocdki.php";
+            break;
+            // case 'updatehoadon':
+          
+            //     include "thongke/thongke.php";
+            //     break;
+
+
         default:
             include "home.php";
             break;
@@ -190,3 +211,4 @@ if (isset($_GET['act'])) {
 } else {
     include "home.php";
 }
+include "boxleft.php";

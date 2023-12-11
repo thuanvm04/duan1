@@ -59,6 +59,9 @@
 .ml15 {
     margin-left: 10px;
 }
+.form-label{
+   text-align: center;
+}
 .button {
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;

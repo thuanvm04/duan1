@@ -140,7 +140,7 @@ border: none;
     background-color: #247dd7;
     color: #ffffff;
     padding: 2px 5px 2px 7px;
-    width: 120px;
+    width: 200px;
     line-height: 25px;
     margin-left: 75px;
 }
@@ -148,4 +148,43 @@ border: none;
 margin-left: 50px;
 
 }
+.icon-checkbox {
+    color: white; /* Green color for the checkbox icon */
+}
+
+.icon-cross {
+    color: white; /* Red color for the cross icon */
+}
+
+/* Style for the hidden checkbox */
+.hidden-checkbox {
+    display: none;
+}
+
+/* Style for the label (button) */
+.custom-button {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 8px 42px;
+    border: 1px solid #ccc;
+   background-color: red;
+    border-radius: 8px;
+}
+.custom-button-1{
+    cursor: pointer;
+    padding: 10px 43px;
+    border: 1px solid #ccc;
+    background-color: green;
+    border-radius: 8px;
+}
+.confirm-button {
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green color for confirmation button */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+}
+
 

@@ -51,12 +51,19 @@
 					<span class="text">BÌNH LUẬN</span>
 				</a>
 			</li>
+			</li><li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'khoahocdki') ? 'active' : ''; ?>">
+				<a href="index.php?act=khoahocdki">
+					<i class='bx bxs-group' ></i>
+					<span class="text">HOÁ ĐƠN</span>
+				</a>
+			</li>
 			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'dstk') ? 'active' : ''; ?>">
 				<a href="index.php?act=dstk">
 					<i class='bx bxs-group' ></i>
 					<span class="text">THÀNH VIÊN</span>
 				</a>
-			</li><li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'thongke') ? 'active' : ''; ?>">
+			</li>
+			<li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'thongke') ? 'active' : ''; ?>">
 				<a href="index.php?act=thongke">
 					<i class='bx bxs-group' ></i>
 					<span class="text">THỐNG KÊ</span>
@@ -64,14 +71,14 @@
 			</li>
 		</ul>
 		<ul class="side-menu">
-			<li> 
-				<a href="..\index.php">
+			<li > 
+				<a href="http://localhost:3000/index.php">
 					<i class='bx bxs-cog' ></i>
 					<span class="text">BACK</span>
 				</a>
 			</li>
 			<li>
-				<a href="logout.php" class="logout">
+				<a href="http://localhost:3000/index.php?act=login" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>

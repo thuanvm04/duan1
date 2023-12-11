@@ -74,12 +74,18 @@ if (session_status() === PHP_SESSION_NONE) {
                                             </li>
                                             <li><a href="">Liên hệ </a></li>
                                         <?php
-                                        if (isset($_SESSION['username'])) {
+                                        if (isset($_SESSION['username']) ) {
                                         ?>
+                                        <?php 
+                                        if (isset($_SESSION["role"]) && $_SESSION["role"] == "user") {?>
                                          <li><a href="index.php?act=khdadangki">Khoá học đã đăng kí </a></li>
+                                         <?php
+
+                                         
+                                        } ?>
                                             <li><a href="index.php?dangxuat=1">Log Out</a></li>
                                             
-                                            <!-- <li><a href="http://localhost/duan1/admin/">Admin</a></li> -->
+                                            <li><a href="http://localhost/duan1/admin/">Admin</a></li>
                                         <?php
                                         } else {
                                         ?>

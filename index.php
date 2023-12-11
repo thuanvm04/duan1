@@ -14,8 +14,7 @@ include "views/header.php";
 // $listbl = hien_thi_bl($course_id);
 $khnew = kh_selectAll_view();
 $listbl = hien_thi_binh_luan();
-$listdki=get_course_dki();
-
+$userId = selectAll_userid();
 
 
 if (isset($_GET['act'])) {
@@ -23,9 +22,9 @@ if (isset($_GET['act'])) {
     switch ($act) {
 
         case 'login':
-            
-           
-            $isRegistrationSuccess = false; 
+
+
+            $isRegistrationSuccess = false;
 
             // Xử lý khi form được submit
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -44,10 +43,10 @@ if (isset($_GET['act'])) {
                         $_SESSION["user_id"] = $user["user_id"];
                         $_SESSION["username"] = $user["username"];
                         $_SESSION["role"] = $user["role"];
-   
+
                         // Redirect dựa vào vai trò của người dùng
                         if (isset($_SESSION["role"]) && $_SESSION["role"] == "admin") {
-                            header("Location: admin");
+                            header("Location: admin/index.php");
                         } else {
                             header("Location: index.php");
                         }
@@ -55,14 +54,13 @@ if (isset($_GET['act'])) {
                     } else {
 
                         $error_message = "Invalid email or password";
-                       
                     }
                 } elseif (isset($_POST["register"])) {
                     $email = $_POST["email"];
                     $username = $_POST["username"];
                     $password = $_POST["password"];
                     $full_name = $_POST["full_name"];
-                
+
                     // Kiểm tra tính hợp lệ của dữ liệu đăng ký
                     if (empty($username) || empty($email) ||  empty($password) ||  empty($full_name)) {
                         $error_message = "Nhập đầy đủ các dữ liệu để đăng kí";
@@ -70,9 +68,9 @@ if (isset($_GET['act'])) {
                         if (kiem_tra_ton_tai($username, $email)) {
                             $error_message = "Tên hoặc gmail đã được đăng kí";
                         } else {
-                            
+
                             them_khach_hang($username, $full_name, $password, $email);
-                            $isRegistrationSuccess = true; 
+                            $isRegistrationSuccess = true;
                             echo '<script>
                             document.addEventListener("DOMContentLoaded", function () {
                                 alert("
@@ -88,31 +86,31 @@ if (isset($_GET['act'])) {
             include "views/login.php";
             break;
 
-            case 'forgot_password':
-                
-                // $isRegistrationSuccess = false; 
+        case 'forgot_password':
 
-                if (isset($_POST['forgot_password'])) {
-                    $email = $_POST["email"];
-                
-                    $check_email = check_email($email);
-                
-                    if (is_array($check_email)) {
-                        $error_message = "Mật khẩu của bạn là: " . $check_email['password'];
-                        // header('location: index.php');
-                        echo "2";
-                    } else {
-                        $error_message = "Email không tồn tại";
-                        // $isRegistrationSuccess = true;
-                        echo "3";
-                    }
+            // $isRegistrationSuccess = false; 
+
+            if (isset($_POST['forgot_password'])) {
+                $email = $_POST["email"];
+
+                $check_email = check_email($email);
+
+                if (is_array($check_email)) {
+                    $error_message = "Mật khẩu của bạn là: " . $check_email['password'];
+                    // header('location: index.php');
+                    echo "2";
                 } else {
-                    echo "1";
+                    $error_message = "Email không tồn tại";
+                    // $isRegistrationSuccess = true;
+                    echo "3";
                 }
-                
-            
-                include "views/forgot_password.php";
-                break;
+            } else {
+                echo "1";
+            }
+
+
+            include "views/forgot_password.php";
+            break;
 
 
 
@@ -152,7 +150,7 @@ if (isset($_GET['act'])) {
             //     $danhmuc = danhmuc_selectAll();
             //     include "views/khoahoc.php";
             //     break;
-              
+
         case 'course':
             include "views/khoahoc.php";
             break;
@@ -173,37 +171,78 @@ if (isset($_GET['act'])) {
         case 'bill':
             include "views/bill.php";
             break;
-          
+           
+            case 'trungtam':
+                include "views/khdadangki.php";
+                break;
         case 'invoice':
-            if (isset($_POST['redirect']) && $_POST['redirect']) {
+            if (isset($_POST['redirect']) && $_POST['redirect'] || isset($_POST['redirect-2']) && $_POST['redirect-2']) {
                 $userid = $_POST['user_id'];
                 $fullname = $_POST['full_name'];
                 $email = $_POST['email'];
                 $phone = $_POST['phone'];
                 $coursename = $_POST['course_name'];
                 $price = $_POST['course_price'];
-                $pttt = $_POST['redirect'];
+                if (isset($_POST['redirect-2']) && isset($_POST['trangthai-2'])) {
+                    $pttt = $_POST['redirect-2'];
+                    $trangthai = $_POST['trangthai-2'];
+                }else{
+                     $pttt = $_POST['redirect'];
+                    $trangthai = $_POST['trangthai'];
+                }
+              
                 $instructor = $_POST['instructor'];
+                $thoigian = $_POST['thoigian'];
                 $classname = $_POST['classname'];
                 $time_start = $_POST['time_start'];
                 $time_end = $_POST['time_end'];
                 date_default_timezone_set('Asia/Ho_Chi_Minh');
                 $timestamp =  date("Y-m-d H:i:s");
-                addbill($userid,$fullname, $email, $phone, $coursename, $price, $pttt, $instructor, $classname, $time_start, $time_end,$timestamp);
+                addbill($userid, $fullname, $email, $phone, $coursename, $price, $pttt, $instructor, $classname,$thoigian, $time_start, $time_end, $timestamp,$trangthai);
 
                 $thongbao = "Thêm thành công";
             }
 
             include "views/invoice.php";
             break;
-            case 'khdadangki':
-                include "views/khdadangki.php";
-                break;
+        case 'khdadangki':
+            // $listdki = array();
+            
+            // foreach ($userId as $user) {
+            //     $user_id = $user['user_id'];
+            //     $courses_dki = get_courses_dki($user_id);
 
+            //     // Kiểm tra xem $courses_dki có phải là mảng không
+            //     if (is_array($courses_dki) && !empty($courses_dki)) {
+            //         // Thêm vào danh sách
+            //         $listdki[$user_id] = $courses_dki;
+            //     }
+            // }
+            if (isset($_SESSION['username'])) {
+                    // Viết câu truy vấn SQL để lấy user_id từ bảng users dựa trên username
+                    $sql = "SELECT user_id FROM users WHERE username = ?";
+                    // Gọi hàm pdo_query_one để thực hiện truy vấn
+                    $userData = pdo_query_one($sql, $_SESSION['username']);
+                    // Kiểm tra nếu có dữ liệu
+                    if ($userData) {
+                        $userId = $userData['user_id'];
+                    } else {
+                        echo "Không tìm thấy user_id cho username: " . $_SESSION['username'];
+                    }
+                    $courses_dki = get_courses_dki($userId);
+                    // if (is_array($courses_dki)) {
+                    //     $courses_dki = implode(', ', $courses_dki);
+                    // }
+            } else {
+                echo "Session 'username' không tồn tại.";
+            }
+            
+            // echo $userId;
+            include "views/khdadangki.php";
+            break;
         default:
             include "views/home.php";
             break;
-
     }
 } else {
     include "views/home.php";
