@@ -57,9 +57,11 @@ function search_selectAll_view($key, $category_id) {
 
     // Thêm điều kiện vào câu truy vấn nếu $key không rỗng
     if ($key != "") {
-        $sql .= " AND course_name LIKE '%" . $key . "%'";
+        $sql .= " AND course_name LIKE '%" . $key . "%' OR classname LIKE '%" . $key . "%'";
     }
-
+    // if ($key != "") {
+    //     $sql .= " AND classname LIKE '%" . $key . "%'";
+    // }
     // Thêm phần sắp xếp và giới hạn số lượng kết quả trả về
     $sql .= " ORDER BY course_id DESC LIMIT 0,9 ";
 
