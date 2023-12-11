@@ -38,7 +38,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
- 
+
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="css/stylelogin.css">
@@ -64,38 +64,29 @@ if (session_status() === PHP_SESSION_NONE) {
                                 <nav id="mobile-menu" style="display: block;">
                                     <ul>
                                         <li class="sub">
-												<a href="index.php?act=home">Trang chủ</a>
-											</li>
-                                            <li><a href="index.php?act=home">Thông tin</a></li>
-                                           
-                                            <li class="sub"> 
-                                              <a href="index.php?act=course">Khoá học</a>
-                                               
-                                            </li>
-                                            <li><a href="">Liên hệ </a></li>
-                                        <?php
-                                        if (isset($_SESSION['username']) ) {
-                                        ?>
-                                        <?php 
-                                        if (isset($_SESSION["role"]) && $_SESSION["role"] == "user") {?>
-                                         <li><a href="index.php?act=khdadangki">Khoá học đã đăng kí </a></li>
-                                         <?php
+                                            <a href="index.php?act=home">Trang chủ</a>
+                                        </li>
+                                        <li><a href="index.php?act=home">Thông tin</a></li>
 
-                                         
-                                        } ?>
+                                        <li class="sub">
+                                            <a href="index.php?act=course">Khoá học</a>
+
+                                        </li>
+                                        <li><a href="">Liên hệ </a></li>
+                                        <?php if (isset($_SESSION['username'])) { ?>
+                                            <?php if (isset($_SESSION["role"]) && $_SESSION["role"] == "user") {
+                                                echo ' <li><a href="index.php?act=khdadangki">Khoá học đã đăng kí </a></li>';
+                                            } else {
+                                                echo '<li><a href="http://localhost/duan1/admin/">Admin</a></li>';
+                                            }
+                                            ?>
                                             <li><a href="index.php?dangxuat=1">Log Out</a></li>
-                                            
-                                            <li><a href="http://localhost/duan1/admin/">Admin</a></li>
-                                        <?php
-                                        } else {
-                                        ?>
+                                        <?php } else { ?>
                                             <li><a href="index.php?act=login">Sign In</a></li>
 
-                                        <?php
-                                        }
-                                        ?>
-                                           
-                                        
+                                        <?php } ?>
+
+
                                     </ul>
                                 </nav>
                             </div>
