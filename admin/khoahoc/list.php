@@ -4,18 +4,18 @@
     <h1>DANH SÁCH KHOÁ HỌC</h1>
   </div>
   <form action="index.php?act=listkh" method="POST" class="row2 form_dm_listkh">
-    <input class="form_dm_listkh" type="text" name="key" width="30px">
-    <select name="danhmuc" id="">
+    <input class="form_dm_listkh" type="text" name="key" >
+    <select name="danhmuc" class="danhmuc">
       <option value="0" selected>Tất cả</option>
       <?php
       foreach ($danhmuc as $dm) {
         extract($dm);
-        echo '<option value="' . $category_id . '">' . $category_name . '</option>';
+        echo '<option class=bgr_danhmuc value="' . $category_id . '">' . $category_name . '</option>';
       }
       ?>
     </select>
    
-    <input type="submit" name="listloc" value="LỌC">
+    <input type="submit" class="danhmuc_option " name="listloc" value="LỌC">
   </form>
   <div class="row2 form_content ">
     <form action="#" method="POST">

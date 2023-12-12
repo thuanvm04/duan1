@@ -44,7 +44,7 @@ function updatetrangthai( $newStatus ,$billId) {
         $conn = pdo_get_connection();
 
         // Câu truy vấn cập nhật trạng thái sản phẩm
-        $sql = "UPDATE bills SET trangthai = ? WHERE bill_id = ?";
+        $sql = "UPDATE bills SET trangthai = ? WHERE bill_id = ? ";
 
         // Thực thi truy vấn
         pdo_execute($sql, $newStatus, $billId);

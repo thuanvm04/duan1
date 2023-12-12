@@ -73,7 +73,8 @@ if(is_array($kh)){
           <!-- intro -->
           <div class="row2 mb10 form_content_container">
             <label> INTRO</label> <br>
-            <input type="text" name="intro" value="<?=$intro?>" placeholder="nhập intro ">
+            <textarea name="intro" cols="30" rows="10"><?=$intro?></textarea>
+            
           </div>
           <div class="row2 mb10">
             <h1>DANH MỤC</h1> <br>

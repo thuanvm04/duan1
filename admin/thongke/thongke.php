@@ -33,7 +33,9 @@
         </form>
         <li class="<?php echo (!isset($_GET['act']) || $_GET['act'] === 'bieudo') ? 'active' : ''; ?>">
             <a href="index.php?act=bieudo">
-                <span class="text">XEM BIỂU ĐỒ</span>
+                <div class="row btn_list mt20">
+             <input  class="mr20" type="button" value="XEM BIỂU ĐỒ"></a>
+           </div>
             </a>
         </li>
     </div>

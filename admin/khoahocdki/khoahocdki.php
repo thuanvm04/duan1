@@ -1,3 +1,5 @@
+
+  
 <main>
 <div class="row2 container mt20">
   <div class="row2 font_title mb">
@@ -22,15 +24,17 @@
             <th>KHAI GIẢNG</th>
             <th>THỜI GIAN BẮT ĐẦU</th>
             <th>THỜI GIAN KẾT THÚC</th>
+            <th>THỜI GIAN ĐĂNG KÍ</th>
             <th>TRẠNG THÁI THANH TOÁN</th>
+         
          
             <!-- <th>BUỔI HỌC</th> -->
           </tr>
 
           <?php
 foreach ($allcourses as $all) {
-    extract($all);
-  
+  extract($all);
+
     $temp =  '<label class="custom-button">
     <input type="submit" class="hidden-checkbox" />
     <span class="icon-cross">✘</span> 
@@ -55,11 +59,10 @@ if (isset($_POST['xacnhan']) && ($_POST['xacnhan'])) {
   $update= updatetrangthai($test2, $billId);
   if ($update) {
     $test= $temp2;
+    
     }
 
 }
-
-
 
     echo '<tr>
         <td>' . $course_name. '</td>
@@ -73,9 +76,10 @@ if (isset($_POST['xacnhan']) && ($_POST['xacnhan'])) {
         <td>' . $thoigian. '</td>
         <td>' . $time_start . '</td>
         <td>' . $time_end . '</td>
+        <td>' . $timestamp . '</td>
         <td>' . $test . '</td>
     </tr>';
-}
+  }
 ?>
 <input type="hidden" name="test2" id="" value="Đã thanh toán">
 

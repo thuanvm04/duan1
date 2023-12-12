@@ -22,7 +22,7 @@
                     extract($dstk);
                     // $suatk = "index.php?act=suatk&ma_kh=".$ma_kh;
                     $xoatk = "index.php?act=xoatk&user_id=".$user_id;
-
+                    $suatk = "index.php?act=suatk&user_id=".$user_id;
                     echo '<tr>
                            
                             <td>'.$user_id.'</td>
@@ -33,7 +33,7 @@
                             <td>'.$registration_date.'</td>
                             <td>'.$role.'</td>
                             <td> 
-                                <a href="index.php?act=edittk"><input class="btn_edit_listdm" type="button" value="Sửa"></a>  
+                                <a href="'.$suatk.'"><input class="btn_edit_listdm" type="button" value="Sửa"></a>  
                                 <a href="'.$xoatk.'"><input class="btn_delete_listdm"  type="button" value="Xóa"></a>
                             </td>
                         </tr>';

@@ -3,7 +3,7 @@
 
 if (isset($_POST['redirect'])) {
     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    $vnp_Returnurl = "http://localhost/htdocs/duan1/index.php?act=invoice";
+    $vnp_Returnurl = "http://localhost/duan1/index.php?act=invoice";
     $vnp_TmnCode = "064XW8TO"; //Mã website tại VNPAY 
     $vnp_HashSecret = "PBYPHCHFWNDCOURIICWZRBYJOJDOETKG"; //Chuỗi bí mật
 
@@ -133,7 +133,7 @@ if (isset($_POST['redirect'])) {
     // Xử lý nếu không có dữ liệu POST được gửi đến trang này
     echo '
     <section class="breadcrumb-area">
-    <div class="container5">
+    <div class="container4">
     <label class="form-label" for="full_name">  <h1>Chúc mừng bạn đã tham gia khoá học 💕</h1></label>
     <p class="form-label">Bạn có thể lựa chọn thêm khoá học phù hợp</p>
     <button type="button" class="btn btn-primary" ><a href="index.php?act=course">CHỌN THÊM</a></button>

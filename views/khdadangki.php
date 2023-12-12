@@ -64,6 +64,8 @@
             <th> KHAI GIẢNG</th>
             <th>THỜI GIAN BẮT ĐẦU</th>
             <th>THỜI GIAN KẾT THÚC</th>
+            <th>THỜI GIAN ĐĂNG KÍ</th>
+            <th>PHƯƠNG THỨC THANH TOÁN</th>
           </tr>
         </thead>
         <tbody>
@@ -81,6 +83,8 @@
                     <td>' . htmlspecialchars($thoigian) . '</td>
                     <td>' . htmlspecialchars($time_start) . '</td>
                     <td>' . htmlspecialchars($time_end) . '</td>
+                    <td>' . htmlspecialchars($timestamp) . '</td>
+                    <td>' . htmlspecialchars($pttt) . '</td>
                   </tr>';
             }
           } else {

@@ -1,7 +1,3 @@
-<?php
-// session_start();
-// Lưu giá vào phiên làm việc
-?>
 
 <!-- offcanvas-area -->
 <div class="offcanvas-menu">
@@ -193,7 +189,7 @@
                                         <ul>
                                             <!-- Additional details here -->
                                         </ul>
-                                        <h6 class="pt-20 pb-20">HỌC PHÍ: <span><?php echo $course['price']; ?></span></h6>
+                                        <h6 class="pt-20 pb-20">HỌC PHÍ: <span><?php echo $course['price']; ?>VNĐ</span></h6>
 
                                         <?php
                                         if (isset($_SESSION['username'])) {
@@ -208,12 +204,13 @@
                                                 <input type="hidden" name="course_id" value="<?php echo $course['course_id']; ?>">
                                                 <input type="hidden" name="course_name" value="<?php echo $course['course_name']; ?>">
                                                 <input type="hidden" name="price" value="<?php echo $course['price']; ?>">
-                                                <input class="btn ss-btn mb-2" name="addpay" type="submit" value="ĐĂNG KÍ KHOÁ HỌC">
+                                                 <input class="btn ss-btn mb-2" name="addpay" type="submit" value="ĐĂNG KÍ KHOÁ HỌC">
+
                                             </form>
                                         <?php
                                         } else {
                                         ?>
-                                            <a class="btn ss-btn" href="index.php?act=pay">ĐĂNG KÍ KHOÁ HỌC</a>
+                                            <a class="btn ss-btn" href="index.php?act=login">ĐĂNG KÍ KHOÁ HỌC</a>
 
                                         <?php
                                         }

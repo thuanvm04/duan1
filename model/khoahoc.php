@@ -116,9 +116,12 @@ function selectAll_userid() {
     return pdo_query($sql);
 }
 function get_all_courses_dki() {
-    $sql = "SELECT * FROM bills ORDER BY bill_id DESC";
+    $sql = "SELECT * FROM bills ORDER BY bill_id desc";
     return pdo_query($sql);
 }
+
+
+
 
 
 ?>

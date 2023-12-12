@@ -49,6 +49,44 @@
 
     </section>
     <!-- slider-area-end -->
+     <!-- featured-courses-area -->
+     <section id="courses" class="courses-area fix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-align text-center mb-50">
+                        <h5>KHOÁ HỌC TỐT NHẤT</h5>
+                        <h2>
+                            KHOÁ HỌC MỚI NHẤT
+                        </h2>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+
+                    <div class="featured-courses-active">
+                    <?php
+            foreach ($khnew as $kh) {
+                extract($kh);
+                
+                 echo '       <div class="box-courses">
+                            <a href="index.php?act=detail&spct='.$course_id.'"><img src="../admin/image/' . $image . '"></a>
+                            <div class="text">
+                               
+                                <h3><a href="index.php?act=detail&spct='.$course_id.'">'.$course_name.'</a></h3>
+                            </div>
+                        </div>';
+                    }
+                    ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- featured-courses-area-end -->
     <!-- about-area -->
     <section id="about" class="about-area about-p pt-70 pb-120 p-relative" style="background: url(img/features/about-bg-aliments.png) no-repeat;background-position: center center;">
         <div class="container">
@@ -101,6 +139,50 @@
         </div>
     </section>
     <!-- about-area-end -->
+      <!-- testimonial-area -->
+      <section class="testimonial-area pt-120 pb-120" style=" background-image: url(img/testimonial/test-bg-aliments.png); background-repeat: no-repeat; background-position: center; background-color: #fff7f5;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-title second-atitle pt-15">
+                        <h5>Lời chứng thực</h5>
+                        <h2>
+                            Xem
+                            khách hàng <br>của chúng tôi nói gì
+                        </h2>
+                        <p class="pt-15">"Việc lập trình là một hành trình, không phải là một điểm đến. Niềm vui không chỉ nằm ở kết quả cuối cùng mà còn ở quá trình sáng tạo chính. Những lỗi bạn gặp phải, những thách thức bạn vượt qua, và sự học hỏi liên tục là những cột mốc trên con đường trở thành một lập trình viên thành thạo."</p>
+                    </div>
+
+                </div>
+              
+                <div class="mb" id="binhluan"></div>
+                <div class="col-lg-6">
+                    <div class="testimonial-active">
+                       
+                    <?php   foreach ($listbl as $lbl): { ?>
+                    
+                        <div class="single-testimonial">
+                            <div class="testi-author">
+                                <img src="img/testimonial/testi_avatar.png" alt="img">
+                                <div class="ta-info">
+                                    
+                                    <span><h5>Student</h5></span>
+                                </div>
+                            </div>
+                            <div class="qt-img">
+                                <img src="img/testimonial/qt-icon.png" alt="img">
+                            </div>
+                            <p><?= $lbl['content'] ?></p>
+
+                        </div>  
+               <?php } endforeach; ?>
+                    
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
     <!-- vedio-area -->
     <section id="vedio" class="vedio-area pt-120 pb-90 fix" style=" background-image: url(img/video/vedio-bg.png); background-repeat: no-repeat;">
         <div class="container">
@@ -131,88 +213,8 @@
         </div>
     </section>
     <!-- vedio-area-end -->
-    <!-- featured-courses-area -->
-    <section id="courses" class="courses-area fix">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title center-align text-center mb-50">
-                        <h5>KHOÁ HỌC TỐT NHẤT</h5>
-                        <h2>
-                            KHOÁ HỌC MỚI NHẤT
-                        </h2>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-
-                    <div class="featured-courses-active">
-                    <?php
-            foreach ($khnew as $kh) {
-                extract($kh);
-                
-                 echo '       <div class="box-courses">
-                            <a href="index.php?act=detail&spct='.$course_id.'"><img src="../admin/image/' . $image . '"></a>
-                            <div class="text">
-                                <h5>'.$thoigian.'</h5>
-                                <h3><a href="index.php?act=detail&spct='.$course_id.'">'.$course_name.'</a></h3>
-                            </div>
-                        </div>';
-                    }
-                    ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- featured-courses-area-end -->
-    <!-- testimonial-area -->
-    <section class="testimonial-area pt-120 pb-120" style=" background-image: url(img/testimonial/test-bg-aliments.png); background-repeat: no-repeat; background-position: center; background-color: #fff7f5;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-title second-atitle pt-15">
-                        <h5>Lời chứng thực</h5>
-                        <h2>
-                            Xem
-                            khách hàng <br>của chúng tôi nói gì
-                        </h2>
-                        <p class="pt-15">"Việc lập trình là một hành trình, không phải là một điểm đến. Niềm vui không chỉ nằm ở kết quả cuối cùng mà còn ở quá trình sáng tạo chính. Những lỗi bạn gặp phải, những thách thức bạn vượt qua, và sự học hỏi liên tục là những cột mốc trên con đường trở thành một lập trình viên thành thạo."</p>
-                    </div>
-
-                </div>
-              
-                <div class="mb" id="binhluan"></div>
-                <div class="col-lg-6">
-                    <div class="testimonial-active">
-                       
-                    <?php   foreach ($listbl as $lbl): { ?>
-                    
-                        <div class="single-testimonial">
-                            <div class="testi-author">
-                                <img src="img/testimonial/testi_avatar.png" alt="img">
-                                <div class="ta-info">
-                                    <h6>Name khách hàng</h6>
-                                    <span>Student</span>
-                                </div>
-                            </div>
-                            <div class="qt-img">
-                                <img src="img/testimonial/qt-icon.png" alt="img">
-                            </div>
-                            <p><?= $lbl['content'] ?></p>
-
-                        </div>  
-               <?php } endforeach; ?>
-                    
-                </div>
-            </div>
-        </div>
-       
-    </section>
-
+   
+  
     <!-- testimonial-area-end -->
 </main>
 <!-- main-area-end -->

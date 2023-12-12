@@ -66,13 +66,13 @@ if (session_status() === PHP_SESSION_NONE) {
                                         <li class="sub">
                                             <a href="index.php?act=home">Trang chủ</a>
                                         </li>
-                                        <li><a href="index.php?act=home">Thông tin</a></li>
+                                
 
                                         <li class="sub">
                                             <a href="index.php?act=course">Khoá học</a>
 
                                         </li>
-                                        <li><a href="">Liên hệ </a></li>
+                                        <li><a href="index.php?act=lienhe">Liên hệ </a></li>
                                         <?php if (isset($_SESSION['username'])) { ?>
                                             <?php if (isset($_SESSION["role"]) && $_SESSION["role"] == "user") {
                                                 echo ' <li><a href="index.php?act=khdadangki">Khoá học đã đăng kí </a></li>';
@@ -80,9 +80,9 @@ if (session_status() === PHP_SESSION_NONE) {
                                                 echo '<li><a href="http://localhost/duan1/admin/">Admin</a></li>';
                                             }
                                             ?>
-                                            <li><a href="index.php?dangxuat=1">Log Out</a></li>
+                                            <li><a href="index.php?dangxuat=1">Đăng kí</a></li>
                                         <?php } else { ?>
-                                            <li><a href="index.php?act=login">Sign In</a></li>
+                                            <li><a href="index.php?act=login">Đăng nhập</a></li>
 
                                         <?php } ?>
 

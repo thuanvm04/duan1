@@ -16,9 +16,8 @@
                     <div class="footer-widget footer-link mt-20 text-center">
                         <ul>
                             <li><a href="index.php?act=home">Trang chủ</a></li>
-                            <li><a href="about.html"> Thông tin</a></li>
-                            <li><a href="main.php?act=course">Khoá học </a></li>
-                            <li><a href="contact.html">Liên hệ</a></li>
+                            <li><a href="index.php?act=course">Khoá học </a></li>
+                            <li><a href="index.php?act=lienhe">Liên hệ</a></li>
                            
                         </ul>
                     </div>

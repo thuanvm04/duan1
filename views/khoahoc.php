@@ -75,7 +75,7 @@
                                     <img src="img/testimonial/testi_avatar.png" alt="image">
                                 </div>
 
-                                <div class="text">
+                                <div class="text teacher">
                                     <a href="#">' . $instructor . '</a>
                                     <p>Teacher</p>
                                 </div>
@@ -83,8 +83,8 @@
 
 
                         </ul>
-                        <div class="price">' . $price . '</div>
-                        <h4 class="pro-title"><a href="index.php?act=detail&spct=">' . $course_name . '</a></h4>
+                        <div class="price">' . $price .'</div>
+                        <h4 class="pro-title"><a href="index.php?act=detail&spct=' . $course_id . '">' . $course_name . '</a></h4>
                         <p>' . $description . '</p>
                         <ul class="course-meta desc">
                             <li>

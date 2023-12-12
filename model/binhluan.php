@@ -8,7 +8,7 @@
         $sql = "SELECT * FROM comments WHERE course_id = $course_id";
         return pdo_query($sql);
     }
-
+  
     function hien_thi_binh_luan(){
         $sql = "SELECT * FROM comments ORDER BY comment_id DESC";
         return pdo_query($sql);

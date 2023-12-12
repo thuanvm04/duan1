@@ -53,7 +53,7 @@ if (isset($_GET['act'])) {
                         exit();
                     } else {
 
-                        $error_message = "Invalid email or password";
+                        $error_message = "Email hoặc mật khẩu không hợp lệ";
                     }
                 } elseif (isset($_POST["register"])) {
                     $email = $_POST["email"];
@@ -171,7 +171,9 @@ if (isset($_GET['act'])) {
         case 'bill':
             include "views/bill.php";
             break;
-           
+            case 'lienhe':
+                include "views/lienhe.php";
+                break;
             case 'trungtam':
                 include "views/khdadangki.php";
                 break;
@@ -206,18 +208,7 @@ if (isset($_GET['act'])) {
             include "views/invoice.php";
             break;
         case 'khdadangki':
-            // $listdki = array();
-            
-            // foreach ($userId as $user) {
-            //     $user_id = $user['user_id'];
-            //     $courses_dki = get_courses_dki($user_id);
-
-            //     // Kiểm tra xem $courses_dki có phải là mảng không
-            //     if (is_array($courses_dki) && !empty($courses_dki)) {
-            //         // Thêm vào danh sách
-            //         $listdki[$user_id] = $courses_dki;
-            //     }
-            // }
+          
             if (isset($_SESSION['username'])) {
                     // Viết câu truy vấn SQL để lấy user_id từ bảng users dựa trên username
                     $sql = "SELECT user_id FROM users WHERE username = ?";
@@ -230,9 +221,7 @@ if (isset($_GET['act'])) {
                         echo "Không tìm thấy user_id cho username: " . $_SESSION['username'];
                     }
                     $courses_dki = get_courses_dki($userId);
-                    // if (is_array($courses_dki)) {
-                    //     $courses_dki = implode(', ', $courses_dki);
-                    // }
+                    
             } else {
                 echo "Session 'username' không tồn tại.";
             }
@@ -240,6 +229,7 @@ if (isset($_GET['act'])) {
             // echo $userId;
             include "views/khdadangki.php";
             break;
+            
         default:
             include "views/home.php";
             break;

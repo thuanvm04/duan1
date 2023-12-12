@@ -48,4 +48,9 @@ function kiem_tra_ton_tai($username, $email) {
     $sql = "SELECT * FROM users WHERE username = ? OR email = ?";
     return pdo_query_one($sql, $username, $email);
 }
+
+function edit_taikhoan($role,$user_id){
+    $sql = "UPDATE users SET role =? WHERE user_id= ?";
+    pdo_execute($sql, $role,$user_id);
+}
 ?>

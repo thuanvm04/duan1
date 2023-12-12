@@ -161,6 +161,22 @@ if (isset($_GET['act'])) {
             $danhsachtk = hien_thi_khach_hang();
             include "taikhoan/list.php";
             break;
+            case 'suatk':
+                if (isset($_GET['user_id']) && ($_GET['user_id'] > 0)) {
+                    $kh = hien_thi_mot_khach_hang($_GET['user_id']);
+                }
+                include "taikhoan/update.php";
+                break;
+            case 'updatetk':
+                if (isset($_POST['capnhat']) && $_POST['capnhat']) {
+                    $user_id= $_POST['user_id'];
+                    $role = $_POST['role'];
+                    edit_taikhoan( $role,$user_id);
+                    $thongbao = "cập nhật thành công";
+                }
+                $danhsachtk = hien_thi_khach_hang();
+                include "taikhoan/list.php";
+                break;
             // Bình Luận
         case 'dsbl':
             $danhsachbl = hien_thi_binh_luan();
@@ -187,22 +203,12 @@ if (isset($_GET['act'])) {
             // hoá đơn
         case 'khoahocdki':
             $allcourses = get_all_courses_dki();
-
-
-    //   $billId=selectone_idbill();
-     
-    //   if (is_array($billId)) {
-    //     $billId = implode(', ', $billId);
-    // }
+       
        
    
             include "khoahocdki/khoahocdki.php";
             break;
-            // case 'updatehoadon':
-          
-            //     include "thongke/thongke.php";
-            //     break;
-
+    
 
         default:
             include "home.php";
