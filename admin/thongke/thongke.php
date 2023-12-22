@@ -22,9 +22,9 @@
                                 <td>' . $madm . '</td>
                                 <td>' . $tendm . '</td>
                                 <td>' . $soluong . '</td>
-                                <td>' . '$ ' . $gia_min . '</td>
-                                <td>' . '$ ' . $gia_max . '</td>
-                                <td>' . '$ ' . number_format($gia_avg, 2) . '</td>
+                                <td>'  . $gia_min . '</td>
+                                <td>'  . $gia_max . '</td>
+                                <td>'  . number_format($gia_avg, 0) . '</td>
                             </tr>';
                     }
                     ?>

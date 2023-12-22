@@ -28,6 +28,8 @@
     </script>
   </head>
   <body>
+    <div class="container mt20 row2">
     <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </div>
   </body>
 </html>

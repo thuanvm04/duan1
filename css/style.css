@@ -9127,10 +9127,12 @@ input {
     background-color: #2980b9; /* Màu nền thay đổi khi rê chuột lên nút Submit */
 }
 .teacher{
-    color:cyan;
+    text-shadow: 2px 2px 2px cyan;
+    color: black;
    font-weight : bold;
 }
 .teacher a{
-    color:cyan;
+    text-shadow: 2px 2px 2px cyan;
+    color:black;
     font-weight : bold;
 }

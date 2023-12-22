@@ -13,6 +13,7 @@
 	<li>Danh mục : Quản lí ,thêm ,sửa ,xoá danh mục</li>
 	<li>Khoá học : Quản lí ,thêm ,sửa ,xoá khoá học</li>
 	<li>Bình luận : Quản lí bình luận người dùng</li>
+	<li>Hoá đơn : Thống kê hoá đơn khoá học của website</li>
 	<li>Thành viên : Quản lí thành viên đã đăng kí</li>
 	<li>Thống kê : Thống kê số liệu website</li>
 	</ul>

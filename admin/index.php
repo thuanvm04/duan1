@@ -199,13 +199,10 @@ if (isset($_GET['act'])) {
             $listsp = load_thong_ke();
             include "thongke/bieudo.php";
             break;
-
             // hoá đơn
         case 'khoahocdki':
             $allcourses = get_all_courses_dki();
-       
-       
-   
+ 
             include "khoahocdki/khoahocdki.php";
             break;
     

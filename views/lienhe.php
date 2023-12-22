@@ -8,7 +8,7 @@
        .container2{
         margin: 100px 0;
        }
-        h2{
+        h3{
            margin-bottom: 40px;
             text-align: center;
             color: #4CAF50;
@@ -53,9 +53,34 @@
     </style>
 </head>
 <body>
+<section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.png)">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="breadcrumb-wrap text-left">
+                    <div class="breadcrumb-title">
+                        <h2>Liên Hệ Cho Chúng Tôi</h2>
+                        <div class="breadcrumb-wrap">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.php?act=home">Trang chủ</a></li>
+                                    <li class="breadcrumb-item active">
+                                    <a href="index.php?act=lienhe">Liên Hệ</a>
+                                    
+                                       
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
    <div class="container2">
-   <h2>Liên Hệ</h2>
+   <h3>Liên Hệ</h3>
 
 <form>
     <label for="name">Họ và Tên:</label>

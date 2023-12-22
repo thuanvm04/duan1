@@ -5,9 +5,18 @@
 
 
 // Sửa khách hàng
-function sua_khach_hang($ma_kh, $mat_khau, $ho_ten, $email,$username) {
-    $sql = "UPDATE users SET password = ?, full_name = ?, email = ?, username =? WHERE user_id = ?";
-    pdo_execute($sql, $mat_khau, $ho_ten, $email,$username, $ma_kh);
+function sua_khach_hang($ma_kh, $mat_khau, $ho_ten, $email, $username, $new_password) {
+    $sql = "UPDATE users SET password = ?, full_name = ?, email = ?, username = ? WHERE user_id = ?";
+    
+    // Kiểm tra nếu có mật khẩu mới thì cập nhật
+    if (!empty($new_password)) {
+        $sql = "UPDATE users SET password = ?, full_name = ?, email = ?, username = ? WHERE user_id = ?";
+        pdo_execute($sql, $new_password, $ho_ten, $email, $username, $ma_kh);
+    } else {
+        // Nếu không có mật khẩu mới, cập nhật thông tin khác
+        $sql = "UPDATE users SET full_name = ?, email = ?, username = ? WHERE user_id = ?";
+        pdo_execute($sql, $ho_ten, $email, $username, $ma_kh);
+    }
 }
 
 // Xóa khách hàng
@@ -53,4 +62,10 @@ function edit_taikhoan($role,$user_id){
     $sql = "UPDATE users SET role =? WHERE user_id= ?";
     pdo_execute($sql, $role,$user_id);
 }
+function kiem_tra_mat_khau_hien_tai($ma_kh, $password) {
+    $sql = "SELECT * FROM users WHERE user_id=? AND password=?";
+    $user = pdo_query_one($sql, $ma_kh,  $password);
+    return !empty($user);
+}
+
 ?>

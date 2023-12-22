@@ -1,7 +1,7 @@
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fff;
     margin: 0;
 
 
@@ -46,6 +46,31 @@
 </style>
 
 <body>
+<section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.png)">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="breadcrumb-wrap text-left">
+                    <div class="breadcrumb-title">
+                        <h2>KHÓA HỌC CỦA TÔi</h2>
+                        <div class="breadcrumb-wrap">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.php?act=home">Trang chủ</a></li>
+                                    <li class="breadcrumb-item active">
+                                    <a href="index.php?act=course">Khoá học</a>
+                                    
+                                       
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
  
     <div class="h1">
       <h1>Danh sách khoá học đã đăng kí</h1>

@@ -80,7 +80,8 @@ if (session_status() === PHP_SESSION_NONE) {
                                                 echo '<li><a href="http://localhost/duan1/admin/">Admin</a></li>';
                                             }
                                             ?>
-                                            <li><a href="index.php?dangxuat=1">Đăng kí</a></li>
+                                             <li><a href="index.php?act=updatetk">Thông tin tài khoản</a></li>
+                                            <li><a href="index.php?dangxuat=1">Đăng xuất</a></li>
                                         <?php } else { ?>
                                             <li><a href="index.php?act=login">Đăng nhập</a></li>
 

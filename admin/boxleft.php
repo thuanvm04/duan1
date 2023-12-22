@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,9 +79,9 @@
 				</a>
 			</li>
 			<li>
-				<a href="http://localhost:3000/index.php?act=login" class="logout">
+				<a href="logout.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Logout</span>
+					<span class="text">Đăng xuất</span>
 				</a>
 			</li>
 		</ul>

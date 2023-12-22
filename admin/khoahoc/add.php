@@ -89,7 +89,6 @@
           </div>
           <div class="row mb10 btn_adddm">
           <input class="mr20" type="submit" name="themmoi" value="THÊM MỚI">
-
             <a href="index.php?act=listkh"><input class="mr20" type="button" value="DANH SÁCH"></a>
           </div>
           

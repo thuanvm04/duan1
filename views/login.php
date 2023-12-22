@@ -62,7 +62,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             <?php
             if ($isRegistrationSuccess) {
-                echo 'alert("Registration successful! You can now log in.");';
+                echo 'alert("Đăng ký thành công! Bây giờ bạn có thể đăng nhập.");';
             } elseif (!empty($error_message)) {
                 echo 'alert("' . addslashes($error_message) . '");';
             }
